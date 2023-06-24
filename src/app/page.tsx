@@ -95,11 +95,19 @@ export default function Home() {
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda, sint deserunt expedita ipsam distinctio error explicabo illum minima deleniti autem, officiis in magni labore consequuntur nemo dolores saepe, dignissimos quia?
               </p>
             </div>
-
           </div>
+
+        <div className="row">
+          <p className='text-center pt-1 mb-0'>
+            <img src="https://skillicons.dev/icons?i=firebase,react,js,html,css&theme=dark" alt='Firebase, React, Js, Css, HTML'/>
+          </p>
         </div>
 
-        <br />
+        </div>
+        <br/>
+    </div>
+
+
 
     <br />
     <div className="mx-4 border-top border-secondary"></div>
@@ -110,10 +118,11 @@ export default function Home() {
 
       <h4>Education</h4>
       <br/>
+      <br/>
+      <br/>
 
     </div>
 
-    </div>
 
   </div>
 
