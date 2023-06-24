@@ -1,0 +1,25 @@
+body {
+    background-color: hsl(218, 30%, 10%) !important;
+}
+
+p.about{
+    color: rgb(175, 199, 223) !important;
+}
+
+.rounded-card{
+    background-color: hsl(218, 30%, 18%)
+}
+
+.proj-card{
+    background-color: hsl(218, 30%, 24%) !important;
+}
+
+.btn-primary{
+    background-color: hsl(221, 29%, 34%) !important;
+    border-color: rgb(62, 78, 113) !important;
+}
+
+.btn-primary:hover{
+    background-color: hsl(221, 29%, 40%) !important;
+    border-color: hsl(221, 29%, 40%)  !important;
+}
