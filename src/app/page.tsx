@@ -1,5 +1,9 @@
 import Image from 'next/image'
 import 'bootstrap/dist/css/bootstrap.css'
+import profileImg from './img/profile.png'
+import dentalImg from './img/dental-turno.png'
+import ecommerceImg from './img/ecommerce.png'
+import fulbolistaImg from './img/peloturno.png'
 
 
 export default function Home() {
@@ -11,7 +15,7 @@ export default function Home() {
   <div className='rounded-card container-sm mt-5 p-2 border  border-dark rounded-4'>
 
     <div className='m-auto text-center' style={{position:'relative',top:'-50px', height:'115px'}}>
-      <img className='border border-5 border-secondary' width={150} src="https://www.w3schools.com/howto/img_avatar.png" alt="" style={{borderRadius:'100%', width:'150px', height:'150px'}}/>
+      <Image className='border border-5 border-secondary' width={150} src={profileImg} alt='Profile img' style={{borderRadius:'100%', width:'150px', height:'150px'}}/>
     </div>
 
     <h2 className='text-center'>
@@ -40,13 +44,12 @@ export default function Home() {
 
         <div className='proj-card row border p-3 mx-1 border rounded-4 border-0'>
 
-          <div className="row text-center m-auto py-1"><p className='m-0 p-0'>PROJ TITLE</p></div>
+          <div className="row text-center m-auto py-1"><p className='m-0 p-0'>DENTAL TURNO</p></div>
 
           <div className="row m-auto">
 
             <div className="col m-auto text-center py-2 ">
-              <img src="https://getuikit.com/v2/docs/images/placeholder_600x400_2.svg" alt="" height={200} width={300} style={{borderRadius:'20px'}}/>
-            </div>
+            <Image height={200} width={300} src={dentalImg} alt='Dental Turno' style={{borderRadius:'20px'}}/>            </div>
             <div className="col py-2">
               <p className='about'>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda, sint deserunt expedita ipsam distinctio error explicabo illum minima deleniti autem, officiis in magni labore consequuntur nemo dolores saepe, dignissimos quia?
@@ -60,13 +63,12 @@ export default function Home() {
 
         <div className='proj-card row border p-3 mx-1 border rounded-4 border-0'>
 
-          <div className="row text-center m-auto py-1"><p className='m-0 p-0'>PROJ TITLE</p></div>
+          <div className="row text-center m-auto py-1"><p className='m-0 p-0'>E-COMMERCE</p></div>
 
           <div className="row m-auto ">
 
             <div className="col m-auto text-center py-2 ">
-              <img src="https://getuikit.com/v2/docs/images/placeholder_600x400_2.svg" alt="" height={200} width={300} style={{borderRadius:'20px'}}/>
-            </div>
+            <Image height={200} width={300} src={ecommerceImg} alt='Dental Turno' style={{borderRadius:'20px'}}/>            </div>
             <div className="col py-2">
               <p className='about'>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda, sint deserunt expedita ipsam distinctio error explicabo illum minima deleniti autem, officiis in magni labore consequuntur nemo dolores saepe, dignissimos quia?
@@ -81,12 +83,12 @@ export default function Home() {
 
         <div className='proj-card row border p-3 mx-1 border rounded-4 border-0'>
 
-          <div className="row text-center m-auto py-1"><p className='m-0 p-0'>PROJ TITLE</p></div>
+          <div className="row text-center m-auto py-1"><p className='m-0 p-0'>FULBOLISTA</p></div>
 
           <div className="row m-auto">
 
             <div className="col m-auto text-center py-2 ">
-              <img src="https://getuikit.com/v2/docs/images/placeholder_600x400_2.svg" alt="" height={200} width={300} style={{borderRadius:'20px'}}/>
+              <Image height={200} width={300} src={fulbolistaImg} alt='Dental Turno' style={{borderRadius:'20px'}}/>
             </div>
             <div className="col py-2">
               <p className='about'>
