@@ -18,7 +18,7 @@ export default function Home() {
       TOBIAS PILARCHE
     </h2>
 
-    <p className='text-center'> DEV JR. </p>
+    <h5 className='text-center about'> DEV JR. </h5>
 
     <div className='p-2 mx-4'>
       <p className='about'>
@@ -42,7 +42,7 @@ export default function Home() {
 
           <div className="row text-center m-auto py-1"><p className='m-0 p-0'>PROJ TITLE</p></div>
 
-          <div className="row m-auto ">
+          <div className="row m-auto">
 
             <div className="col m-auto text-center py-2 ">
               <img src="https://getuikit.com/v2/docs/images/placeholder_600x400_2.svg" alt="" height={200} width={300} style={{borderRadius:'20px'}}/>
@@ -83,7 +83,7 @@ export default function Home() {
 
           <div className="row text-center m-auto py-1"><p className='m-0 p-0'>PROJ TITLE</p></div>
 
-          <div className="row m-auto ">
+          <div className="row m-auto">
 
             <div className="col m-auto text-center py-2 ">
               <img src="https://getuikit.com/v2/docs/images/placeholder_600x400_2.svg" alt="" height={200} width={300} style={{borderRadius:'20px'}}/>
@@ -99,8 +99,17 @@ export default function Home() {
 
         <br />
 
-
+    <br />
+    <div className="mx-4 border-top border-secondary"></div>
+    <br />
+    <br />
         
+    <div className="mx-4">
+
+      <h4>Education</h4>
+      <br/>
+
+    </div>
 
     </div>
 
