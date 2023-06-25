@@ -57,6 +57,13 @@ export default function Home() {
             </div>
 
           </div>
+
+        <div className="row">
+          <p className='text-center pt-1 mb-0'>
+            <img src="https://skillicons.dev/icons?i=angular,typescript,django,python,&theme=dark" alt='Angular, TS, Django, Python'/>
+          </p>
+        </div>
+
         </div>
         <br />
         <br />
@@ -76,6 +83,13 @@ export default function Home() {
             </div>
 
           </div>
+
+          <div className="row">
+          <p className='text-center pt-1 mb-0'>
+            <img src="https://skillicons.dev/icons?i=angular,wordpress,php,mysql&theme=dark" alt='Firebase, React, Js, Css, HTML'/>
+          </p>
+        </div>
+
         </div>
 
         <br />
@@ -99,7 +113,7 @@ export default function Home() {
 
         <div className="row">
           <p className='text-center pt-1 mb-0'>
-            <img src="https://skillicons.dev/icons?i=firebase,react,js,html,css&theme=dark" alt='Firebase, React, Js, Css, HTML'/>
+            <img src="https://skillicons.dev/icons?i=firebase,react,js,bootstrap&theme=dark" alt='Firebase, React, Js,Bootstrap'/>
           </p>
         </div>
 
