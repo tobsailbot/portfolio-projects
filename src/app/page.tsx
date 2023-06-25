@@ -36,9 +36,11 @@ export default function Home() {
 
         <h5 className='text-center about'> DEV JR.</h5>
 
-        <div className='p-2 mx-4 mt-3'>
+        <div className='p-2 mx-5 mt-3'>
           <p className='about'>
-            Lorem ipsum dolor sit, dolem sitamet insuto del rpihguinty acame amet es amet consectetur adipisicing elit.Unde recusandae sunt laboriosam magni, eveniet ipsam quas hic aliquam repellendus cum sit voluptatem voluptas ea dolorem porro!
+          🌐 I’m a self-taught developer from <i>Argentina</i> with a passion for creating web solutions. <br />
+          I’ve worked as a freelancer on various web projects that aimed to solve real-world problems or to facilitate the work of other people.
+          I have experience in developing fullstack applications from scratch and deploying them online. 
           </p>
         </div>
 
@@ -51,7 +53,7 @@ export default function Home() {
         </div>
 
         <div className='text-center mt-3 mb-3'>
-          <i className='about'> tpilarche@gmail.com</i>
+          <i className='about'>tpilarche@gmail.com</i>
         </div>
 
       </div>
