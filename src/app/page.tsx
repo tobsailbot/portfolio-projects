@@ -5,6 +5,20 @@ import dentalImg from './img/dental-turno.png'
 import ecommerceImg from './img/ecommerce.png'
 import fulbolistaImg from './img/peloturno.png'
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faGithub } from "@fortawesome/free-brands-svg-icons"
+import { faLinkedin } from "@fortawesome/free-brands-svg-icons"
+import { faCode } from '@fortawesome/free-solid-svg-icons'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { faGraduationCap } from '@fortawesome/free-solid-svg-icons'
+
+import faIcon from './icons/window-restore-solid.svg'
+
+const iconSize = {
+  width: "25px",
+  height: "25px",
+  color:'rgb(175, 199, 223)',
+};
 
 export default function Home() {
   return (
@@ -22,16 +36,26 @@ export default function Home() {
       TOBIAS PILARCHE
     </h2>
 
-    <h5 className='text-center about'> DEV JR. </h5>
+    <h5 className='text-center about'> DEV JR.</h5>
 
     <div className='p-2 mx-4'>
       <p className='about'>
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit.Unde recusandae sunt laboriosam magni, eveniet ipsam quas hic aliquam repellendus cum sit voluptatem voluptas ea dolorem porro! 
+      Lorem ipsum dolor sit, dolem sitamet insuto del rpihguinty acame amet es amet consectetur adipisicing elit.Unde recusandae sunt laboriosam magni, eveniet ipsam quas hic aliquam repellendus cum sit voluptatem voluptas ea dolorem porro! 
       </p>
     </div>
 
+    <div className=' m-auto text-center pt-2'>
+      <button className='btn p-0 btn-dark'><FontAwesomeIcon style={iconSize} icon={faLinkedin} /></button>
+      &nbsp; &nbsp; &nbsp;
+      <button className='btn p-0 btn-dark'><FontAwesomeIcon style={iconSize} icon={faGithub} /></button>
+      &nbsp; &nbsp; &nbsp; 
+      <button className='btn p-0 btn-dark'><FontAwesomeIcon style={iconSize} icon={faEnvelope} /></button>
+    </div>
 
-    <br />
+    <div className='text-center mt-3'>
+      <i className='about'> tpilarche@gmail.com</i>
+    </div>
+
     <br />
     <div className="mx-4 border-top border-secondary"></div>
     <br />
@@ -39,12 +63,12 @@ export default function Home() {
 
     <div className="mx-4">
 
-      <h4>Projects</h4>
+      <h4><FontAwesomeIcon className='align-top py-0' style={iconSize} icon={faCode} /> &nbsp;Projects</h4>
       <br />
 
         <div className='proj-card row border p-3 mx-1 border rounded-4 border-0'>
 
-          <div className="row text-center m-auto py-1"><p className='m-0 p-0'>DENTAL TURNO</p></div>
+          <div className="row text-center m-auto py-1 "><h6 className='m-0 p-0 '>DENTAL TURNO</h6></div>
 
           <div className="row m-auto">
 
@@ -60,7 +84,7 @@ export default function Home() {
 
         <div className="row">
           <p className='text-center pt-1 mb-0'>
-            <img src="https://skillicons.dev/icons?i=angular,typescript,django,python,&theme=dark" alt='Angular, TS, Django, Python'/>
+            <img src="https://skillicons.dev/icons?i=angular,typescript,django,python&theme=dark" alt='Angular, TS, Django, Python'/>
           </p>
         </div>
 
@@ -70,7 +94,7 @@ export default function Home() {
 
         <div className='proj-card row border p-3 mx-1 border rounded-4 border-0'>
 
-          <div className="row text-center m-auto py-1"><p className='m-0 p-0'>E-COMMERCE</p></div>
+          <div className="row text-center m-auto py-1"><h6 className='m-0 p-0'>E-COMMERCE</h6></div>
 
           <div className="row m-auto ">
 
@@ -97,7 +121,7 @@ export default function Home() {
 
         <div className='proj-card row border p-3 mx-1 border rounded-4 border-0'>
 
-          <div className="row text-center m-auto py-1"><p className='m-0 p-0'>FULBOLISTA</p></div>
+          <div className="row text-center m-auto py-1"><h6 className='m-0 p-0'>FULBOLISTA</h6></div>
 
           <div className="row m-auto">
 
@@ -130,10 +154,20 @@ export default function Home() {
         
     <div className="mx-4">
 
-      <h4>Education</h4>
+    <h4><FontAwesomeIcon className='align-top py-0' style={iconSize} icon={faGraduationCap} /> &nbsp;Education</h4>
       <br/>
-      <br/>
-      <br/>
+      <p>
+        - Universidad Nacional de Lanus
+        - Técnico en Audiovisión (2017 - 2023)
+      </p>
+
+      <p>
+        - Multiple courses and seminaries (2021 - Today)
+      </p>
+
+      <p>
+        - Self-taught (2021 - Today)
+      </p>
 
     </div>
 
