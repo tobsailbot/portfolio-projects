@@ -12,9 +12,7 @@ import { faCode } from '@fortawesome/free-solid-svg-icons'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { faGraduationCap } from '@fortawesome/free-solid-svg-icons'
 
-import faIcon from './icons/window-restore-solid.svg'
-
-const iconSize = {
+const iconSize:any = {
   width: "25px",
   height: "25px",
   color: 'rgb(175, 199, 223)',
@@ -69,21 +67,23 @@ export default function Home() {
           <br />
 
           <div className='proj-card row border p-3 mx-1 border rounded-4 border-0'>
-            <div className="row text-center m-auto py-3 "><h6 className='m-0 p-0 '>DENTAL TURNO</h6></div>
+            <div className="row text-center m-auto py-3"><p className='m-0 p-0 h6'>DENTAL TURNO</p></div>
             <div className="row m-auto p-1">
               <div className="col-12 m-auto text-center py-2" style={{maxWidth:'350px'}}>
-                <Image height={200} width={300} src={dentalImg} alt='Dental Turno' style={{ borderRadius: '20px', width:'100%', height:'100%' }} /> 
+                <Image height={200} width={300} src={dentalImg} alt='Dental Turno' style={{ borderRadius: '20px', width:'100%', height:'100%'}} /> 
               </div>
-              <div className="col pt-3">
-                <p className='about'>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda, sint deserunt expedita ipsam distinctio error explicabo illum minima deleniti autem, officiis in magni labore consequuntur nemo dolores saepe, dignissimos quia?
-                </p>
+              <div className="col d-grid">
+                <div className="row py-3">
+                  <p className='about'>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. officiis in magni labore consequuntur nemo dolores saepe, dignissimos quia?
+                  </p>
+                </div>
+                <div className="row">
+                  <p className='text-center'>
+                    <img height={45} src="https://skillicons.dev/icons?i=angular,typescript,django,python&theme=dark" alt='Angular, TS, Django, Python' />
+                  </p>
+                </div>
               </div>
-            </div>
-            <div className="row">
-              <p className='text-center py-3 my-0'>
-                <img height={45} src="https://skillicons.dev/icons?i=angular,typescript,django,python&theme=dark" alt='Angular, TS, Django, Python' />
-              </p>
             </div>
           </div>
 
@@ -91,45 +91,51 @@ export default function Home() {
           <br />
 
           <div className='proj-card row border p-3 mx-1 border rounded-4 border-0'>
-            <div className="row text-center m-auto py-1"><h6 className='m-0 p-0'>E-COMMERCE</h6></div>
-            <div className="row m-auto ">
-              <div className="col m-auto text-center py-2 ">
-                <Image height={200} width={300} src={ecommerceImg} alt='Dental Turno' style={{ borderRadius: '20px' }} />            </div>
-              <div className="col py-2">
-                <p className='about'>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda, sint deserunt expedita ipsam distinctio error explicabo illum minima deleniti autem, officiis in magni labore consequuntur nemo dolores saepe, dignissimos quia?
-                </p>
+            <div className="row text-center m-auto py-3"><p className='m-0 p-0 h6'>E-COMMERCE</p></div>
+            <div className="row m-auto p-1">
+              <div className="col-12 m-auto text-center py-2" style={{maxWidth:'350px'}}>
+                <Image height={200} width={300} src={ecommerceImg} alt='E-COMMERCE' style={{ borderRadius: '20px', width:'100%', height:'100%'}} /> 
               </div>
-            </div>
-            <div className="row">
-              <p className='text-center pt-1 mb-0'>
-                <img src="https://skillicons.dev/icons?i=angular,wordpress,php,mysql&theme=dark" alt='Firebase, React, Js, Css, HTML' />
-              </p>
+              <div className="col d-grid">
+                <div className="row py-3">
+                  <p className='about'>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. officiis in magni labore consequuntur nemo dolores saepe, dignissimos quia?
+                  </p>
+                </div>
+                <div className="row">
+                  <p className='text-center'>
+                    <img height={45} src="https://skillicons.dev/icons?i=angular,wordpress,php,mysql&theme=dark" alt='Angular, Wordpress, php, mysql' />
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
 
           <br />
-          <br />
+          <br />  
 
           <div className='proj-card row border p-3 mx-1 border rounded-4 border-0'>
-            <div className="row text-center m-auto py-1"><h6 className='m-0 p-0'>FULBOLISTA</h6></div>
-            <div className="row m-auto">
-              <div className="col m-auto text-center py-2 ">
-                <Image height={200} width={300} src={fulbolistaImg} alt='Dental Turno' style={{ borderRadius: '20px' }} />
+            <div className="row text-center m-auto py-3"><p className='m-0 p-0 h6'>FULBOLISTA</p></div>
+            <div className="row m-auto p-1">
+              <div className="col-12 m-auto text-center py-2" style={{maxWidth:'350px'}}>
+                <Image height={200} width={300} src={fulbolistaImg} alt='Fulbolista' style={{ borderRadius: '20px', width:'100%', height:'100%'}} /> 
               </div>
-              <div className="col py-2">
-                <p className='about'>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda, sint deserunt expedita ipsam distinctio error explicabo illum minima deleniti autem, officiis in magni labore consequuntur nemo dolores saepe, dignissimos quia?
-                </p>
+              <div className="col d-grid">
+                <div className="row py-3">
+                  <p className='about'>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. officiis in magni labore consequuntur nemo dolores saepe, dignissimos quia?
+                  </p>
+                </div>
+                <div className="row">
+                  <p className='text-center'>
+                    <img height={45} src="https://skillicons.dev/icons?i=firebase,react,js,bootstrap&theme=dark" alt='Firebase, React, Js,Bootstrap' />
+                  </p>
+                </div>
               </div>
-            </div>
-            <div className="row">
-              <p className='text-center pt-1 mb-0'>
-                <img src="https://skillicons.dev/icons?i=firebase,react,js,bootstrap&theme=dark" alt='Firebase, React, Js,Bootstrap' />
-              </p>
             </div>
           </div>
 
+          <br />
           <br />
 
         </div>
