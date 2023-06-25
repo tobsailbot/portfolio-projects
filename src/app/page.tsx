@@ -75,8 +75,7 @@ export default function Home() {
               <div className="col d-grid">
                 <div className="row py-3">
                   <p className='about'>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. officiis in magni labore consequuntur nemo dolores saepe, dignissimos quia?
-                  </p>
+                  A web app system for managing dental appointments with an integrated scheduler, patient profiles, and an interactive odontogram.</p>
                 </div>
                 <div className="row">
                   <p className='text-center'>
@@ -99,7 +98,7 @@ export default function Home() {
               <div className="col d-grid">
                 <div className="row py-3">
                   <p className='about'>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. officiis in magni labore consequuntur nemo dolores saepe, dignissimos quia?
+                  An e-commerce site for digital products. Built with WordPress plugins and an Angular microfrontend. Features a database, email delivery and downloads.
                   </p>
                 </div>
                 <div className="row">
@@ -123,13 +122,10 @@ export default function Home() {
               <div className="col d-grid">
                 <div className="row py-3">
                   <p className='about'>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. officiis in magni labore consequuntur nemo dolores saepe, dignissimos quia?
-                  </p>
+                  A website for organizing football matches, where a user creates a room and other players join. They can chat, choose teams and see their names.                  </p>
                 </div>
-                <div className="row">
-                  <p className='text-center'>
-                    <img height={45} src="https://skillicons.dev/icons?i=firebase,react,js,bootstrap&theme=dark" alt='Firebase, React, Js,Bootstrap' />
-                  </p>
+                <div className="row align-items-center p-0 m-0 text-center justify-content-center" style={{backgroundColor:'hsl(225, 22%, 18%)'}}>
+                    <img height={45} src="https://skillicons.dev/icons?i=firebase,react,js,bootstrap&theme=dark" alt='Firebase, React, Js,Bootstrap' style={{width:'auto'}}/>
                 </div>
               </div>
             </div>
