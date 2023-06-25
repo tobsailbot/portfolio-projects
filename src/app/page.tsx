@@ -79,10 +79,10 @@ export default function Home() {
                   <p className='about'>
                   A web app system for managing dental appointments with an integrated scheduler, patient profiles, and an interactive odontogram.</p>
                 </div>
-                <div className="row">
-                  <p className='text-center'>
-                    <img height={45} src="https://skillicons.dev/icons?i=angular,typescript,django,python&theme=dark" alt='Angular, TS, Django, Python' />
-                  </p>
+                <div className="row align-items-center p-0 m-0 text-center justify-content-center" >
+                  <div style={{backgroundColor:'hsl(225, 22%, 18%)', width:'auto', padding:'10px 22px 10px 22px', borderRadius:'12px'}}>
+                    <img height={42} src="https://skillicons.dev/icons?i=angular,typescript,django,python&theme=dark" alt='Angular, TS, Django, Python' />
+                  </div>
                 </div>
               </div>
             </div>
@@ -103,10 +103,10 @@ export default function Home() {
                   An e-commerce site for digital products. Built with WordPress plugins and an Angular microfrontend. Features a database, email delivery and downloads.
                   </p>
                 </div>
-                <div className="row">
-                  <p className='text-center'>
-                    <img height={45} src="https://skillicons.dev/icons?i=angular,wordpress,php,mysql&theme=dark" alt='Angular, Wordpress, php, mysql' />
-                  </p>
+                <div className="row align-items-center p-0 m-0 text-center justify-content-center" >
+                  <div style={{backgroundColor:'hsl(225, 22%, 18%)', width:'auto', padding:'10px 22px 10px 22px', borderRadius:'12px'}}>
+                    <img height={42} src="https://skillicons.dev/icons?i=angular,wordpress,php,mysql&theme=dark" alt='Angular, Wordpress, php, mysql' />
+                  </div>
                 </div>
               </div>
             </div>
@@ -126,8 +126,10 @@ export default function Home() {
                   <p className='about'>
                   A website for organizing football matches, where a user creates a room and other players join. They can chat, choose teams and see their names.                  </p>
                 </div>
-                <div className="row align-items-center p-0 m-0 text-center justify-content-center" style={{backgroundColor:'hsl(225, 22%, 18%)'}}>
-                    <img height={45} src="https://skillicons.dev/icons?i=firebase,react,js,bootstrap&theme=dark" alt='Firebase, React, Js,Bootstrap' style={{width:'auto'}}/>
+                <div className="row align-items-center p-0 m-0 text-center justify-content-center" >
+                  <div style={{backgroundColor:'hsl(225, 22%, 18%)', width:'auto', padding:'10px 22px 10px 22px', borderRadius:'12px'}}>
+                    <img height={42} src="https://skillicons.dev/icons?i=firebase,react,js,bootstrap&theme=dark" alt='Firebase, React, Js,Bootstrap' style={{width:'auto'}}/>
+                  </div>
                 </div>
               </div>
             </div>
