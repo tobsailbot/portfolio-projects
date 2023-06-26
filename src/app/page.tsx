@@ -26,6 +26,7 @@ export default function Home() {
 
       <div className='rounded-card container-sm mt-5 p-2 border  border-dark rounded-4'>
 
+    <div className="text-end justify-content-end">
       <div className="row text-end justify-content-end" style={{ position: 'absolute', zIndex:'999', width:'fit-content' }}>
         <div className="col-4">
           <button className="btn btn-primary ">En</button>
@@ -34,6 +35,7 @@ export default function Home() {
           <button className="btn btn-primary ">Es</button>
         </div>
       </div>
+    </div>
 
         <div className='m-auto text-center' style={{ position: 'relative', top: '-50px', height: '115px' }}>
           <Image className='border border-5 border-secondary' width={150} src={profileImg} alt='Profile img' style={{ borderRadius: '100%', width: '150px', height: '150px' }} />
