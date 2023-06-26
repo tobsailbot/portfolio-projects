@@ -20,11 +20,20 @@ const iconSize:any = {
 
 export default function Home() {
   return (
-    <div className='container text-light' style={{ maxWidth: '880px' }}>
+    <div className='container text-light' style={{ maxWidth: '880px'}}>
 
       <br />
 
       <div className='rounded-card container-sm mt-5 p-2 border  border-dark rounded-4'>
+
+      <div className="row text-end justify-content-end" style={{ position: 'absolute', zIndex:'999', width:'fit-content' }}>
+        <div className="col-4">
+          <button className="btn btn-primary ">En</button>
+        </div>
+        <div className="col-4">
+          <button className="btn btn-primary ">Es</button>
+        </div>
+      </div>
 
         <div className='m-auto text-center' style={{ position: 'relative', top: '-50px', height: '115px' }}>
           <Image className='border border-5 border-secondary' width={150} src={profileImg} alt='Profile img' style={{ borderRadius: '100%', width: '150px', height: '150px' }} />
@@ -34,11 +43,11 @@ export default function Home() {
           TOBIAS PILARCHE
         </h2>
 
-        <h5 className='text-center about'> DEV JR.</h5>
+        <h5 className='text-center about'>🌐 DEV JR.</h5>
 
         <div className='p-2 mx-5 mt-3'>
           <p className='about'>
-          🌐 I’m a self-taught developer from <i>Argentina</i> with a passion for creating web solutions. <br />
+          I’m a self-taught developer from <i>Argentina</i> with a passion for creating web solutions. <br />
           I’ve worked as a freelancer on various web projects that aimed to solve real-world problems or to facilitate the work of other people.
           I have experience in developing fullstack applications from scratch and deploying them online. 
           </p>
@@ -157,11 +166,11 @@ export default function Home() {
         </p>
 
         <p>
-          - Multiple courses and seminaries (2021 - Today)
+          - Multiple web-dev courses and seminaries (2021 - Today)
         </p>
 
         <p>
-          - Self-taught (2021 - Today)
+          - Self-taught UI / UX (2021 - Today)
         </p>
 
       </div>
