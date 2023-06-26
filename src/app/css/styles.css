@@ -22,9 +22,15 @@ body {
 .btn-primary{
     background-color: hsl(225, 29%, 34%) !important;
     border-color: rgb(62, 78, 113) !important;
+    border-radius: 12px !important;
 }
 
 .btn-primary:hover{
     background-color: hsl(225, 29%, 40%) !important;
     border-color: hsl(225, 29%, 40%)  !important;
+}
+
+.btn-primary:active{
+    background-color: hsl(225, 29%, 60%) !important;
+    border-color: hsl(225, 29%, 60%)  !important;
 }

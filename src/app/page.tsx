@@ -1,3 +1,4 @@
+'use client';
 import Image from 'next/image'
 import 'bootstrap/dist/css/bootstrap.css'
 import profileImg from './img/profile.png'
@@ -11,6 +12,7 @@ import { faLinkedin } from "@fortawesome/free-brands-svg-icons"
 import { faCode } from '@fortawesome/free-solid-svg-icons'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { faGraduationCap } from '@fortawesome/free-solid-svg-icons'
+import { useState } from 'react';
 
 const iconSize:any = {
   width: "25px",
@@ -19,25 +21,31 @@ const iconSize:any = {
 };
 
 export default function Home() {
+
+  const [isEng, setEngDisabled] = useState(true);
+  const [isEsp, setEspDisabled] = useState(false);
+
+  const changeLang = () => {
+    setEngDisabled(!isEng);
+    setEspDisabled(!isEsp);
+  };
+
   return (
     <div className='container text-light' style={{ maxWidth: '880px'}}>
 
       <br />
-
-      <div className='rounded-card container-sm mt-5 p-2 border  border-dark rounded-4'>
-
-    <div className="text-end justify-content-end">
-      <div className="row text-end justify-content-end" style={{ position: 'absolute', zIndex:'999', width:'fit-content' }}>
-        <div className="col-4">
-          <button className="btn btn-primary ">En</button>
+      <div className="row text-end justify-content-end m-0" style={{ zIndex:'999'}}>
+        <div className="col-2 m-0 p-0" style={{ width: '60px'}}>
+        <button disabled={isEng} className="btn btn-primary px-2" onClick={changeLang}  style={{ zIndex:'999'}}>Eng</button>
         </div>
-        <div className="col-4">
-          <button className="btn btn-primary ">Es</button>
+        <div className="col-2 m-0 p-0" style={{ width: '60px'}}>
+          <button disabled={isEsp}  className="btn btn-primary px-2" onClick={changeLang}  style={{ zIndex:'999'}}>Esp</button>
         </div>
       </div>
-    </div>
 
-        <div className='m-auto text-center' style={{ position: 'relative', top: '-50px', height: '115px' }}>
+      <div className='rounded-card container-sm mt-4 p-2 border border-dark rounded-4'>
+
+        <div className='m-auto text-center' style={{ position: 'relative', top: '-50px', height: '115px', width: 'min-content'}}>
           <Image className='border border-5 border-secondary' width={150} src={profileImg} alt='Profile img' style={{ borderRadius: '100%', width: '150px', height: '150px' }} />
         </div>
 
