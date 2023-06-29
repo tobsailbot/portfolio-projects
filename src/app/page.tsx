@@ -223,33 +223,61 @@ export default function Home() {
       </div>
 
       <br />
-      <div className="mx-4 border-top border-secondary"></div>
       <br />
-      <br />
+      
+      <div className="rounded-card container-sm mt-3 p-2 border  border-dark rounded-4">
 
-      <div className="mx-4">
+        <div className="mx-3">
+          { isEng ? (
+              <h4 className='mt-3'><FontAwesomeIcon className='align-top py-0' style={iconSize} icon={faGraduationCap} />
+              &nbsp; Education
+              </h4>
+            ):
+            (
+              <h4 className='mt-3'><FontAwesomeIcon className='align-top py-0' style={iconSize} icon={faGraduationCap} />
+              &nbsp; Educación
+              </h4>
+            )
+          }
 
-        <h4><FontAwesomeIcon className='align-top py-0' style={iconSize} icon={faGraduationCap} /> &nbsp;Education</h4>
-        <br />
-        <p>
-          - Universidad Nacional de Lanus
-          - Técnico en Audiovisión (2017 - 2023)
-        </p>
+          <br />
+          <div className="proj-card p-3 rounded-4 ">
+            <h6>
+              National University of Lanús
+            </h6>
+            <b>
+              Bachelor's degree in Audiovisual Communication. &nbsp;&nbsp;&nbsp;&nbsp; (2017 - 2023)
+            </b>
+          </div>
 
-        <p>
-          - Multiple web-dev courses and seminaries (2021 - Today)
-        </p>
+          <br />
 
-        <p>
-          - Self-taught UI / UX (2021 - Today)
-        </p>
+          <div className="proj-card p-3 rounded-4 ">
+            <b>
+              Self-taught UI / UX  &nbsp;&nbsp;&nbsp;&nbsp; (2021 - Today)
+            </b>
+          </div>
 
+          <br />
+
+          <div className="proj-card p-3 rounded-4 ">
+            <b>
+              Online courses and seminaries &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (2020 - Today)
+            </b>
+          </div>
+          <br />
+        </div>
       </div>
 
-
-
-
       <br />
+      <br />
+      <br />
+      <br />
+      <br />
+
+      <div className='text-center border-top border-secondary py-3 about'>
+        <i>Created with NextJS by Vercel.</i>
+      </div>
 
 
 
