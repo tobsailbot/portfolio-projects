@@ -12,7 +12,8 @@ import { faLinkedin } from "@fortawesome/free-brands-svg-icons"
 import { faCode } from '@fortawesome/free-solid-svg-icons'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { faGraduationCap } from '@fortawesome/free-solid-svg-icons'
-import { useState } from 'react';
+import { faWrench } from '@fortawesome/free-solid-svg-icons'
+import React, { useRef, useState } from 'react';
 
 const iconSize:any = {
   width: "25px",
@@ -27,6 +28,23 @@ export default function Home() {
   const changeLang = () => {
     setEngDisabled(!isEng);
   };
+
+  function selectText(element: HTMLElement | null) {
+    if (element) {
+      const selection = window.getSelection();
+      const range = document.createRange();
+      range.selectNodeContents(element);
+      selection?.removeAllRanges();
+      selection?.addRange(range);
+    }
+  }
+
+  const selectMeRef = useRef<HTMLDivElement>(null);
+
+  const handleClick = () => {
+    selectText(selectMeRef.current);
+  };
+
 
   return (
     <div className='container text-light' style={{ maxWidth: '880px'}}>
@@ -73,19 +91,18 @@ export default function Home() {
         }
 
         <div className=' m-auto text-center pt-1'>
-          <button className='btn p-1 btn-dark'><FontAwesomeIcon style={iconSize} icon={faLinkedin} /></button>
+          <a className='btn p-1 btn-dark' href={'https://www.linkedin.com/in/tobias-pilarche/'} target='_blank'><FontAwesomeIcon style={iconSize} icon={faLinkedin} /></a>
           &nbsp; &nbsp; &nbsp;
-          <button className='btn p-1 btn-dark'><FontAwesomeIcon style={iconSize} icon={faGithub} /></button>
+          <a className='btn p-1 btn-dark' href={'https://github.com/tobsailbot?tab=repositories'} target='_blank'><FontAwesomeIcon style={iconSize} icon={faGithub} /></a>
           &nbsp; &nbsp; &nbsp;
-          <button className='btn p-1 btn-dark'><FontAwesomeIcon style={iconSize} icon={faEnvelope} /></button>
+          <button className='btn p-1 btn-dark' onClick={handleClick}><FontAwesomeIcon style={iconSize} icon={faEnvelope} /></button>
         </div>
-
         <div className='text-center mt-3 mb-3'>
-          <i className='about'>tpilarche@gmail.com</i>
+          <i className='about' id="selectme" ref={selectMeRef}>tpilarche@gmail.com</i>
         </div>
-
       </div>
 
+      <br />
       <br />
 
       <div className='rounded-card container-sm mt-3 p-2 border  border-dark rounded-4'>
@@ -226,6 +243,63 @@ export default function Home() {
       <br />
 
       <div className="rounded-card container-sm mt-3 p-2 border  border-dark rounded-4">
+        <div className="mx-3">
+
+        { isEng ? (
+              <h4 className='mt-3'><FontAwesomeIcon className='align-top py-0' style={iconSize} icon={faWrench} />
+              &nbsp; Skills
+              </h4>
+            ):
+            (
+              <h4 className='mt-3'><FontAwesomeIcon className='align-top py-0' style={iconSize} icon={faWrench} />
+              &nbsp; Habilidades
+              </h4>
+            )
+          }
+       <br />
+        <div className="proj-card p-3 pb-1 ps-4 rounded-4">
+          <h6>Languages</h6>
+          <ul className='about'>
+            <li>Javascript</li>
+            <li>Python</li>
+            <li>SQL</li>
+            <li>HTML</li>
+            <li>CSS</li>
+          </ul>
+        </div>
+
+        <br />
+
+        <div className="proj-card p-3 pb-1 ps-4 rounded-4">
+          <h6>Frameworks</h6>
+          <ul className='about'>
+            <li>Angular</li>
+            <li>React</li>
+            <li>Django</li>
+            <li>Wordpress</li>
+          </ul>
+        </div>
+
+        <br />
+
+        <div className="proj-card p-3 pb-1 ps-4 rounded-4"> 
+          <h6>Software</h6>
+          <ul className='about'>
+            <li>Adobe Premiere Pro</li>
+            <li>Blender 3D</li>
+            <li>Adobe Photoshop</li>
+          </ul>
+        </div>
+
+        <br />
+
+        </div>
+      </div>
+
+      <br />
+      <br />
+
+      <div className="rounded-card container-sm mt-3 p-2 border  border-dark rounded-4">
 
         <div className="mx-3">
           { isEng ? (
@@ -278,8 +352,6 @@ export default function Home() {
       <div className='text-center border-top border-secondary py-3 about'>
         <i>Created with NextJS by Vercel.</i>
       </div>
-
-
 
     </div>
 
