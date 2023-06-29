@@ -224,7 +224,7 @@ export default function Home() {
 
       <br />
       <br />
-      
+
       <div className="rounded-card container-sm mt-3 p-2 border  border-dark rounded-4">
 
         <div className="mx-3">
@@ -246,7 +246,7 @@ export default function Home() {
               National University of Lanús
             </h6>
             <b>
-              Bachelor's degree in Audiovisual Communication. &nbsp;&nbsp;&nbsp;&nbsp; (2017 - 2023)
+              Bachelor&apos;s degree in Audiovisual Communication. &nbsp;&nbsp;&nbsp;&nbsp; (2017 - 2023)
             </b>
           </div>
 
