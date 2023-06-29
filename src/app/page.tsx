@@ -260,7 +260,15 @@ export default function Home() {
         <div className="proj-card p-3 pb-1 ps-4 rounded-4">
           <h6>Languages</h6>
           <ul className='about'>
-            <li>Javascript</li>
+          <div className="progress-bar mt-3">
+            <div className="skills bar" style={{width: '70%'}}><b>Javascript</b></div>
+          </div>
+          <div className="progress-bar mt-2">
+            <div className="skills bar" style={{width: '70%'}}><b>Python</b></div>
+          </div>
+          <div className="progress-bar mt-2">
+            <div className="skills bar" style={{width: '70%'}}><b>SQL</b></div>
+          </div>
             <li>Python</li>
             <li>SQL</li>
             <li>HTML</li>
@@ -282,14 +290,17 @@ export default function Home() {
 
         <br />
 
-        <div className="proj-card p-3 pb-1 ps-4 rounded-4"> 
           <h6>Software</h6>
           <ul className='about'>
             <li>Adobe Premiere Pro</li>
             <li>Blender 3D</li>
             <li>Adobe Photoshop</li>
           </ul>
+
+        <div className="progress-bar">
+          <div className="skills bar" style={{width: '70%'}}><b>Javascript</b></div>
         </div>
+
 
         <br />
 

@@ -35,3 +35,22 @@ body {
     border-color: hsl(225, 29%, 60%)  !important;
 }
 
+
+.progress-bar{
+    background-color: hsl(225, 22%, 34%) !important;
+    border-radius: 10px;
+    width: 50%;
+}
+
+
+.skills {
+  text-align: left; 
+  padding-left: 15px; 
+  color: rgb(0, 0, 0); 
+  border-radius: 10px;
+}
+
+.bar {
+    background-color:hsl(225, 29%, 65%);
+    border-radius: 10px;
+}
