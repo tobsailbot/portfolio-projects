@@ -23,11 +23,9 @@ const iconSize:any = {
 export default function Home() {
 
   const [isEng, setEngDisabled] = useState(true);
-  const [isEsp, setEspDisabled] = useState(false);
 
   const changeLang = () => {
     setEngDisabled(!isEng);
-    setEspDisabled(!isEsp);
   };
 
   return (
@@ -39,7 +37,7 @@ export default function Home() {
         <button disabled={isEng} className="btn btn-primary px-2" onClick={changeLang}  style={{ zIndex:'999'}}>Eng</button>
         </div>
         <div className="col-2 m-0 p-0" style={{ width: '60px'}}>
-          <button disabled={isEsp}  className="btn btn-primary px-2" onClick={changeLang}  style={{ zIndex:'999'}}>Esp</button>
+          <button disabled={!isEng}  className="btn btn-primary px-2" onClick={changeLang}  style={{ zIndex:'999'}}>Esp</button>
         </div>
       </div>
 
@@ -55,13 +53,24 @@ export default function Home() {
 
         <h5 className='text-center about'>🌐 DEV JR.</h5>
 
-        <div className='p-2 mx-5 mt-3'>
-          <p className='about'>
-          I’m a self-taught developer from <i>Argentina</i> with a passion for creating web solutions. <br />
-          I’ve worked as a freelancer on various web projects that aimed to solve real-world problems or to facilitate the work of other people.
-          I have experience in developing fullstack applications from scratch and deploying them online. 
-          </p>
-        </div>
+        {
+          isEng ?(
+          <div className='p-2 mx-5 mt-3'>
+            <p className='about'>
+              I’m a self-taught developer from <i>Argentina</i> with a passion for creating web solutions. <br />
+              I’ve worked as a freelancer on various projects that aimed to solve real-world problems or to facilitate the work of other people.
+              I have experience in developing fullstack applications from scratch and deploying them online. 
+            </p>
+          </div>):
+          (
+            <div className='p-2 mx-5 mt-3'>
+            <p className='about'>
+            Soy un desarrollador autodidacta de <i>Argentina</i> con pasión por crear soluciones web. <br />
+            He trabajado como freelancer en varios proyectos que tenían como objetivo resolver problemas del mundo real o facilitar el trabajo de otras personas.
+            Tengo experiencia en el desarrollo de aplicaciones fullstack desde cero y en su implementación en línea.
+            </p>
+          </div>)
+        }
 
         <div className=' m-auto text-center pt-1'>
           <button className='btn p-1 btn-dark'><FontAwesomeIcon style={iconSize} icon={faLinkedin} /></button>
@@ -82,9 +91,17 @@ export default function Home() {
       <div className='rounded-card container-sm mt-3 p-2 border  border-dark rounded-4'>
 
         <div className="mx-3">
-
-          <h4 className='mt-3'><FontAwesomeIcon className='align-top py-0' style={iconSize} icon={faCode} /> &nbsp;Projects</h4>
-
+           { isEng ? (
+            <h4 className='mt-3'><FontAwesomeIcon className='align-top py-0' style={iconSize} icon={faCode} />
+            &nbsp; Projects
+            </h4>
+           ):
+           (
+            <h4 className='mt-3'><FontAwesomeIcon className='align-top py-0' style={iconSize} icon={faCode} />
+            &nbsp; Proyectos
+            </h4>
+           )
+           }
           <br />
 
           <div className='proj-card row border p-3 mx-1 border rounded-4 border-0'>
@@ -103,8 +120,14 @@ export default function Home() {
               </div>
               <div className="col d-grid">
                 <div className="row py-3">
-                  <p className='about'>
-                  A web app system for managing dental appointments with an integrated scheduler, patient profiles, and an interactive odontogram.</p>
+                  {
+                  isEng ?(
+                  <p className='about'> A web app system for managing dental appointments with an integrated scheduler, patient profiles, and an interactive odontogram.</p>
+                  ):
+                  (
+                  <p className='about'> Un sistema de aplicación web para gestionar turnos dentales con un calendario integrado, fichero de pacientes y un odontograma interactivo.</p>
+                  )
+                  }
                 </div>
                 <div className="row align-items-center p-0 m-0 text-center justify-content-center" >
                   <div style={{backgroundColor:'hsl(225, 22%, 18%)', width:'auto', padding:'10px 22px 10px 22px', borderRadius:'12px'}}>
@@ -134,9 +157,16 @@ export default function Home() {
               </div>
               <div className="col d-grid">
                 <div className="row py-3">
-                  <p className='about'>
-                  An e-commerce site for digital products. Built with WordPress plugins and an Angular microfrontend. Features a database, email delivery and downloads.
-                  </p>
+                {
+                  isEng ?(
+                    <p className='about'>
+                    An store site for digital products. Built with WordPress plugins and an Angular microfrontend. Features a database, email delivery and downloads.
+                    </p>
+                  ):
+                  (
+                  <p className='about'> Una tienda para productos digitales. Construido con plugins de WordPress y un microfrontend de Angular. Cuenta con una base de datos, entrega de correos electrónicos y descargas.</p>
+                  )
+                  }
                 </div>
                 <div className="row align-items-center p-0 m-0 text-center justify-content-center" >
                   <div style={{backgroundColor:'hsl(225, 22%, 18%)', width:'auto', padding:'10px 22px 10px 22px', borderRadius:'12px'}}>
@@ -166,8 +196,15 @@ export default function Home() {
               </div>
               <div className="col d-grid">
                 <div className="row py-3">
+                {
+                  isEng ?(
                   <p className='about'>
-                  A website for organizing football matches, where a user creates a room and other players join. They can chat, choose teams and see their names.                  </p>
+                  A website for organizing football matches, where a user creates a room and other players join. They can chat, choose teams and see their names.                     </p>
+                  ):
+                  (
+                  <p className='about'>Un sitio web para organizar partidos de fútbol, donde un usuario crea una sala y otros jugadores se unen. Pueden chatear, elegir equipos y ver sus nombres.</p>
+                  )
+                  }
                 </div>
                 <div className="row align-items-center p-0 m-0 text-center justify-content-center" >
                   <div style={{backgroundColor:'hsl(225, 22%, 18%)', width:'auto', padding:'10px 22px 10px 22px', borderRadius:'12px'}}>
