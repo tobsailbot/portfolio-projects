@@ -13,7 +13,7 @@ import { faCode } from '@fortawesome/free-solid-svg-icons'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { faGraduationCap } from '@fortawesome/free-solid-svg-icons'
 import { faWrench } from '@fortawesome/free-solid-svg-icons'
-import { useState } from 'react';
+import React, { useRef, useState } from 'react';
 
 const iconSize:any = {
   width: "25px",
@@ -28,6 +28,23 @@ export default function Home() {
   const changeLang = () => {
     setEngDisabled(!isEng);
   };
+
+  function selectText(element: HTMLElement | null) {
+    if (element) {
+      const selection = window.getSelection();
+      const range = document.createRange();
+      range.selectNodeContents(element);
+      selection?.removeAllRanges();
+      selection?.addRange(range);
+    }
+  }
+
+  const selectMeRef = useRef<HTMLDivElement>(null);
+
+  const handleClick = () => {
+    selectText(selectMeRef.current);
+  };
+
 
   return (
     <div className='container text-light' style={{ maxWidth: '880px'}}>
@@ -74,14 +91,14 @@ export default function Home() {
         }
 
         <div className=' m-auto text-center pt-1'>
-          <button className='btn p-1 btn-dark'><FontAwesomeIcon style={iconSize} icon={faLinkedin} /></button>
+          <a className='btn p-1 btn-dark' href={'https://www.linkedin.com/in/tobias-pilarche/'} target='_blank'><FontAwesomeIcon style={iconSize} icon={faLinkedin} /></a>
           &nbsp; &nbsp; &nbsp;
-          <button className='btn p-1 btn-dark'><FontAwesomeIcon style={iconSize} icon={faGithub} /></button>
+          <a className='btn p-1 btn-dark' href={'https://github.com/tobsailbot?tab=repositories'} target='_blank'><FontAwesomeIcon style={iconSize} icon={faGithub} /></a>
           &nbsp; &nbsp; &nbsp;
-          <button className='btn p-1 btn-dark'><FontAwesomeIcon style={iconSize} icon={faEnvelope} /></button>
+          <button className='btn p-1 btn-dark' onClick={handleClick}><FontAwesomeIcon style={iconSize} icon={faEnvelope} /></button>
         </div>
         <div className='text-center mt-3 mb-3'>
-          <i className='about'>tpilarche@gmail.com</i>
+          <i className='about' id="selectme" ref={selectMeRef}>tpilarche@gmail.com</i>
         </div>
       </div>
 
@@ -328,7 +345,13 @@ export default function Home() {
 
       <br />
       <br />
+      <br />
+      <br />
+      <br />
 
+      <div className='text-center border-top border-secondary py-3 about'>
+        <i>Created with NextJS by Vercel.</i>
+      </div>
 
     </div>
 
