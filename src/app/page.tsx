@@ -64,11 +64,11 @@ export default function Home() {
         </div>
 
         <div className=' m-auto text-center pt-1'>
-          <button className='btn p-0 btn-dark'><FontAwesomeIcon style={iconSize} icon={faLinkedin} /></button>
+          <button className='btn p-1 btn-dark'><FontAwesomeIcon style={iconSize} icon={faLinkedin} /></button>
           &nbsp; &nbsp; &nbsp;
-          <button className='btn p-0 btn-dark'><FontAwesomeIcon style={iconSize} icon={faGithub} /></button>
+          <button className='btn p-1 btn-dark'><FontAwesomeIcon style={iconSize} icon={faGithub} /></button>
           &nbsp; &nbsp; &nbsp;
-          <button className='btn p-0 btn-dark'><FontAwesomeIcon style={iconSize} icon={faEnvelope} /></button>
+          <button className='btn p-1 btn-dark'><FontAwesomeIcon style={iconSize} icon={faEnvelope} /></button>
         </div>
 
         <div className='text-center mt-3 mb-3'>
@@ -88,7 +88,13 @@ export default function Home() {
           <br />
 
           <div className='proj-card row border p-3 mx-1 border rounded-4 border-0'>
-            <div className="row text-center m-auto py-3"><p className='m-0 p-0 h6'>DENTAL TURNO</p></div>
+            <div className="row text-center m-auto py-3">
+            <p className='m-0 p-0 h6' >
+                <a className='link-offset-2' href="https://dental-turno.web.app/" target='_blank' style={{color:'inherit',textDecorationColor: 'grey'}}>
+                  DENTAL TURNO
+                </a>
+              </p>
+              </div>
             <div className="row m-auto p-1">
               <div className="col-12 m-auto text-center py-2" style={{maxWidth:'350px'}}>
                 <a href="https://dental-turno.web.app/" target='_blank'>
@@ -113,10 +119,18 @@ export default function Home() {
           <br />
 
           <div className='proj-card row border p-3 mx-1 border rounded-4 border-0'>
-            <div className="row text-center m-auto py-3"><p className='m-0 p-0 h6'>E-COMMERCE</p></div>
+            <div className="row text-center m-auto py-3">
+              <p className='m-0 p-0 h6' >
+              <a className='link-offset-2' href="https://tobsa.com.ar/" target='_blank' style={{color:'inherit',textDecorationColor: 'grey'}}>
+                  E-COMMERCE
+                </a>
+              </p>
+            </div>
             <div className="row m-auto p-1">
               <div className="col-12 m-auto text-center py-2" style={{maxWidth:'350px'}}>
+                <a href="https://tobsa.com.ar/" target='_blank'>
                 <Image height={200} width={300} src={ecommerceImg} alt='E-COMMERCE' style={{ borderRadius: '20px', width:'100%', height:'100%'}} /> 
+                </a>
               </div>
               <div className="col d-grid">
                 <div className="row py-3">
@@ -137,10 +151,18 @@ export default function Home() {
           <br />  
 
           <div className='proj-card row border p-3 mx-1 border rounded-4 border-0'>
-            <div className="row text-center m-auto py-3"><p className='m-0 p-0 h6'>FULBOLISTA</p></div>
+            <div className="row text-center m-auto py-3">
+              <p className='m-0 p-0 h6' >
+              <a className='link-offset-2' href="https://peloturno-e8bc6.web.app/" target='_blank' style={{color:'inherit',textDecorationColor: 'grey'}}>
+                  FULBOLISTA
+                </a>
+              </p>
+            </div>
             <div className="row m-auto p-1">
               <div className="col-12 m-auto text-center py-2" style={{maxWidth:'350px'}}>
-                <Image height={200} width={300} src={fulbolistaImg} alt='Fulbolista' style={{ borderRadius: '20px', width:'100%', height:'100%'}} /> 
+                <a href="https://peloturno-e8bc6.web.app/" target='_blank'>
+                  <Image height={200} width={300} src={fulbolistaImg} alt='Fulbolista' style={{ borderRadius: '20px', width:'100%', height:'100%'}} /> 
+                </a>
               </div>
               <div className="col d-grid">
                 <div className="row py-3">
