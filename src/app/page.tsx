@@ -12,7 +12,6 @@ import { faLinkedin } from "@fortawesome/free-brands-svg-icons"
 import { faCode } from '@fortawesome/free-solid-svg-icons'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { faGraduationCap } from '@fortawesome/free-solid-svg-icons'
-import { faWrench } from '@fortawesome/free-solid-svg-icons'
 import { useState } from 'react';
 
 const iconSize:any = {
@@ -80,12 +79,13 @@ export default function Home() {
           &nbsp; &nbsp; &nbsp;
           <button className='btn p-1 btn-dark'><FontAwesomeIcon style={iconSize} icon={faEnvelope} /></button>
         </div>
+
         <div className='text-center mt-3 mb-3'>
           <i className='about'>tpilarche@gmail.com</i>
         </div>
+
       </div>
 
-      <br />
       <br />
 
       <div className='rounded-card container-sm mt-3 p-2 border  border-dark rounded-4'>
@@ -223,111 +223,34 @@ export default function Home() {
       </div>
 
       <br />
+      <div className="mx-4 border-top border-secondary"></div>
+      <br />
       <br />
 
-      <div className="rounded-card container-sm mt-3 p-2 border  border-dark rounded-4">
-        <div className="mx-3">
+      <div className="mx-4">
 
-        { isEng ? (
-              <h4 className='mt-3'><FontAwesomeIcon className='align-top py-0' style={iconSize} icon={faWrench} />
-              &nbsp; Skills
-              </h4>
-            ):
-            (
-              <h4 className='mt-3'><FontAwesomeIcon className='align-top py-0' style={iconSize} icon={faWrench} />
-              &nbsp; Habilidades
-              </h4>
-            )
-          }
-       <br />
-        <div className="proj-card p-3 pb-1 ps-4 rounded-4">
-          <h6>Languages</h6>
-          <ul className='about'>
-            <li>Javascript</li>
-            <li>Python</li>
-            <li>SQL</li>
-            <li>HTML</li>
-            <li>CSS</li>
-          </ul>
-        </div>
-
+        <h4><FontAwesomeIcon className='align-top py-0' style={iconSize} icon={faGraduationCap} /> &nbsp;Education</h4>
         <br />
+        <p>
+          - Universidad Nacional de Lanus
+          - Técnico en Audiovisión (2017 - 2023)
+        </p>
 
-        <div className="proj-card p-3 pb-1 ps-4 rounded-4">
-          <h6>Frameworks</h6>
-          <ul className='about'>
-            <li>Angular</li>
-            <li>React</li>
-            <li>Django</li>
-            <li>Wordpress</li>
-          </ul>
-        </div>
+        <p>
+          - Multiple web-dev courses and seminaries (2021 - Today)
+        </p>
 
-        <br />
+        <p>
+          - Self-taught UI / UX (2021 - Today)
+        </p>
 
-        <div className="proj-card p-3 pb-1 ps-4 rounded-4"> 
-          <h6>Software</h6>
-          <ul className='about'>
-            <li>Adobe Premiere Pro</li>
-            <li>Blender 3D</li>
-            <li>Adobe Photoshop</li>
-          </ul>
-        </div>
-
-        <br />
-
-        </div>
       </div>
 
-      <br />
-      <br />
 
-      <div className="rounded-card container-sm mt-3 p-2 border  border-dark rounded-4">
 
-        <div className="mx-3">
-          { isEng ? (
-              <h4 className='mt-3'><FontAwesomeIcon className='align-top py-0' style={iconSize} icon={faGraduationCap} />
-              &nbsp; Education
-              </h4>
-            ):
-            (
-              <h4 className='mt-3'><FontAwesomeIcon className='align-top py-0' style={iconSize} icon={faGraduationCap} />
-              &nbsp; Educación
-              </h4>
-            )
-          }
-
-          <br />
-          <div className="proj-card p-3 rounded-4 ">
-            <h6>
-              National University of Lanús
-            </h6>
-            <b>
-              Bachelor's degree in Audiovisual Communication. &nbsp;&nbsp;&nbsp;&nbsp; (2017 - 2023)
-            </b>
-          </div>
-
-          <br />
-
-          <div className="proj-card p-3 rounded-4 ">
-            <b>
-              Self-taught UI / UX  &nbsp;&nbsp;&nbsp;&nbsp; (2021 - Today)
-            </b>
-          </div>
-
-          <br />
-
-          <div className="proj-card p-3 rounded-4 ">
-            <b>
-              Online courses and seminaries &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (2020 - Today)
-            </b>
-          </div>
-          <br />
-        </div>
-      </div>
 
       <br />
-      <br />
+
 
 
     </div>
