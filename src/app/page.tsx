@@ -91,7 +91,9 @@ export default function Home() {
             <div className="row text-center m-auto py-3"><p className='m-0 p-0 h6'>DENTAL TURNO</p></div>
             <div className="row m-auto p-1">
               <div className="col-12 m-auto text-center py-2" style={{maxWidth:'350px'}}>
-                <Image height={200} width={300} src={dentalImg} alt='Dental Turno' style={{ borderRadius: '20px', width:'100%', height:'100%'}} /> 
+                <a href="https://dental-turno.web.app/" target='_blank'>
+                  <Image height={200} width={300} src={dentalImg} alt='Dental Turno' style={{ borderRadius: '20px', width:'100%', height:'100%'}} /> 
+                </a>
               </div>
               <div className="col d-grid">
                 <div className="row py-3">
