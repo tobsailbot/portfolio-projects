@@ -62,7 +62,7 @@ export default function Home() {
       <div className='rounded-card container-sm mt-4 p-2 border border-dark rounded-4'>
 
         <div className='m-auto text-center' style={{ position: 'relative', top: '-50px', height: '115px', width: 'min-content'}}>
-          <Image className='border border-5 border-secondary' width={150} src={profileImg} alt='Profile img' style={{ borderRadius: '100%', width: '150px', height: '150px' }} />
+          <Image className='border border-5' id='profile-img' width={150} src={profileImg} alt='Profile img' style={{ borderRadius: '100%', width: '150px', height: '150px'}} />
         </div>
 
         <h2 className='text-center'>
@@ -256,51 +256,72 @@ export default function Home() {
               </h4>
             )
           }
+
        <br />
-        <div className="proj-card p-3 pb-1 ps-4 rounded-4">
-          <h6>Languages</h6>
-          <ul className='about'>
-          <div className="progress-bar mt-3">
-            <div className="skills bar" style={{width: '70%'}}><b>Javascript</b></div>
-          </div>
-          <div className="progress-bar mt-2">
-            <div className="skills bar" style={{width: '70%'}}><b>Python</b></div>
-          </div>
-          <div className="progress-bar mt-2">
-            <div className="skills bar" style={{width: '70%'}}><b>SQL</b></div>
-          </div>
-            <li>Python</li>
-            <li>SQL</li>
-            <li>HTML</li>
-            <li>CSS</li>
-          </ul>
+
+        <div className="proj-card p-3 pb-1 ps-4 rounded-4 text-center">
+        { isEng ? (
+              <h6 className='m-0'>Languages</h6>
+            ):
+            (
+              <h6 className='m-0'>Lenguajes</h6>
+            )
+          }
+            <div className="progress-bar row">
+              <div className="skills bar" style={{width: '80%'}}><b>Javascript</b></div>
+            </div>
+            <div className="progress-bar row">
+              <div className="skills bar" style={{width: '75%'}}><b>Python</b></div>
+            </div>
+            <div className="progress-bar row">
+              <div className="skills bar" style={{width: '89%'}}><b>HTML</b></div>
+            </div>
+            <div className="progress-bar row">
+              <div className="skills bar" style={{width: '80%'}}><b>CSS</b></div>
+            </div>
+            <div className="progress-bar row">
+              <div className="skills bar" style={{width: '65%'}}><b>SQL</b></div>
+            </div>
         </div>
 
         <br />
 
-        <div className="proj-card p-3 pb-1 ps-4 rounded-4">
-          <h6>Frameworks</h6>
-          <ul className='about'>
-            <li>Angular</li>
-            <li>React</li>
-            <li>Django</li>
-            <li>Wordpress</li>
-          </ul>
+        <div className="proj-card p-3 pb-1 ps-4 rounded-4 text-center">
+          <h6 className='m-0'>Frameworks</h6>
+            <div className="progress-bar row">
+              <div className="skills bar" style={{width: '76%'}}><b>Angular</b></div>
+            </div>
+            <div className="progress-bar row">
+              <div className="skills bar" style={{width: '68%'}}><b>React</b></div>
+            </div>
+            <div className="progress-bar row">
+              <div className="skills bar" style={{width: '85%'}}><b>Django</b></div>
+            </div>
+            <div className="progress-bar row">
+              <div className="skills bar" style={{width: '75%'}}><b>NextJS</b></div>
+            </div>
         </div>
 
         <br />
 
-          <h6>Software</h6>
-          <ul className='about'>
-            <li>Adobe Premiere Pro</li>
-            <li>Blender 3D</li>
-            <li>Adobe Photoshop</li>
-          </ul>
-
-        <div className="progress-bar">
-          <div className="skills bar" style={{width: '70%'}}><b>Javascript</b></div>
+        <div className="proj-card p-3 pb-1 ps-4 rounded-4 text-center">
+        { isEng ? (
+              <h6 className='m-0'>Softwares (extra)</h6>
+            ):
+            (
+              <h6 className='m-0'>Programas (extra)</h6>
+            )
+          }
+            <div className="progress-bar row">
+              <div className="skills bar" style={{width: '88%'}}><b>Adobe Premiere Pro</b></div>
+            </div>
+            <div className="progress-bar row">
+              <div className="skills bar" style={{width: '75%'}}><b>Blender 3D</b></div>
+            </div>
+            <div className="progress-bar row">
+              <div className="skills bar" style={{width: '83%'}}><b>Adobe Photoshop</b></div>
+            </div>
         </div>
-
 
         <br />
 
