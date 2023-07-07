@@ -69,7 +69,7 @@ export default function Home() {
           TOBIAS PILARCHE
         </h2>
 
-        <h5 className='text-center about'>🌐 DEV JR.</h5>
+        <h5 className='text-center about'>🌐 Developer</h5>
 
         {
           isEng ?(
