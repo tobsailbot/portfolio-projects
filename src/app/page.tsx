@@ -23,11 +23,7 @@ const iconSize:any = {
 
 export default function Home() {
 
-  const [isEng, setEngDisabled] = useState(true);
-
-  const changeLang = () => {
-    setEngDisabled(!isEng);
-  };
+  let isEng:any = true;
 
   function selectText(element: HTMLElement | null) {
     if (element) {
@@ -45,19 +41,17 @@ export default function Home() {
     selectText(selectMeRef.current);
   };
 
+  let idioma = navigator.language.substring(0, 2);
+  console.log(idioma); // Imprime el código de idioma preferido del usuario
+  if (idioma === 'es') {
+    isEng = false;
+  }
 
   return (
     <div className='container text-light' style={{ maxWidth: '880px'}}>
 
       <br />
-      <div className="row text-end justify-content-end m-0" style={{ zIndex:'999'}}>
-        <div className="col-2 m-0 p-0" style={{ width: '60px'}}>
-        <button disabled={isEng} className="btn btn-primary px-2" onClick={changeLang}  style={{ zIndex:'999'}}>Eng</button>
-        </div>
-        <div className="col-2 m-0 p-0" style={{ width: '60px'}}>
-          <button disabled={!isEng}  className="btn btn-primary px-2" onClick={changeLang}  style={{ zIndex:'999'}}>Esp</button>
-        </div>
-      </div>
+      <br />
 
       <div className='rounded-card container-sm mt-4 p-2 border border-dark rounded-4'>
 
