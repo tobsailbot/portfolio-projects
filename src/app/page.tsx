@@ -10,6 +10,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faGithub } from "@fortawesome/free-brands-svg-icons"
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons"
 import { faCode } from '@fortawesome/free-solid-svg-icons'
+import { faFileArrowDown } from '@fortawesome/free-solid-svg-icons'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { faGraduationCap } from '@fortawesome/free-solid-svg-icons'
 import { faWrench } from '@fortawesome/free-solid-svg-icons'
@@ -100,6 +101,8 @@ export default function Home() {
           <a className='btn p-1 btn-dark' href={'https://github.com/tobsailbot?tab=repositories'} target='_blank'><FontAwesomeIcon style={iconSize} icon={faGithub} /></a>
           &nbsp; &nbsp; &nbsp;
           <button className='btn p-1 btn-dark' onClick={handleClick}><FontAwesomeIcon style={iconSize} icon={faEnvelope} /></button>
+          &nbsp; &nbsp; &nbsp;
+          <a className='btn p-1 btn-dark about ' href="/files/CV-Tobias-Pilarche.pdf" download >CV</a>
         </div>
         <div className='text-center mt-3 mb-3'>
           <i className='about' id="selectme" ref={selectMeRef}>tpilarche@gmail.com</i>
