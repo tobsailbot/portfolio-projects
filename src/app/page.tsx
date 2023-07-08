@@ -13,7 +13,7 @@ import { faCode } from '@fortawesome/free-solid-svg-icons'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { faGraduationCap } from '@fortawesome/free-solid-svg-icons'
 import { faWrench } from '@fortawesome/free-solid-svg-icons'
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 const iconSize:any = {
   width: "25px",
@@ -41,9 +41,19 @@ export default function Home() {
     selectText(selectMeRef.current);
   };
 
-  let idioma = navigator.language.substring(0, 2);
-  console.log(idioma); // Imprime el código de idioma preferido del usuario
-  if (idioma === 'es') {
+  const [idioma, setIdioma] = useState('');
+
+  useEffect(() => {
+    const obtenerIdioma = () => {
+      const idiomaNavegador = window.navigator.language;
+      setIdioma(idiomaNavegador);
+    };
+
+    obtenerIdioma();
+  }, []);
+
+  //console.log(idioma); 
+  if (idioma.substring(0, 2) === 'es') {
     isEng = false;
   }
 
