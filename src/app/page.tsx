@@ -16,6 +16,8 @@ import { faGraduationCap } from '@fortawesome/free-solid-svg-icons'
 import { faWrench } from '@fortawesome/free-solid-svg-icons'
 import React, { useEffect, useRef, useState } from 'react';
 
+import ModalBs from './components/modal';
+
 const iconSize: any = {
   width: "25px",
   height: "25px",
@@ -109,6 +111,18 @@ export default function Home() {
           <i className='about' id="selectme" ref={selectMeRef}>tpilarche@gmail.com</i>
         </div>
       </div>
+      
+      {/*
+
+      <ModalBs
+        btn_title='dental turno modal'
+        title='DENTAL TURNO' 
+        description="Aplicación web para gestionar turnos dentales con un calendario integrado, fichero de pacientes y un odontograma interactivo."
+        imgs={
+        <img src='/img/calendario.pn' width={'100%'} style={{ borderRadius: '12px'}}></img>
+      }
+      />
+    */ }
 
       <br />
       <br />

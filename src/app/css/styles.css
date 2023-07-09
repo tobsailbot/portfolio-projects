@@ -70,3 +70,64 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
     margin-top: -8px !important;
 }
 
+.modal-content{
+    background-color: hsl(225, 30%, 24%) !important;
+    border-radius: 12px !important;
+    padding: 5px !important;
+    max-width: 900px !important;
+}
+
+.modal-header{
+    border: none !important;
+}
+
+#contained-modal-title-vcenter{
+    margin: auto !important;
+    padding-left: 40px;
+    color: white !important;
+}
+
+.btn-close{
+    margin: 0 !important;
+    background-color: hsl(225, 29%, 65%) !important;
+    height: 12px !important;
+    width: 12px !important;
+}
+
+.modal-body{
+    border: none !important;
+}
+
+.modal-footer{
+    border: none !important;
+}
+
+.carousel{
+    position:relative !important
+}
+
+.carousel-caption{
+    position: initial !important;
+    padding-bottom: 2.2rem !important;
+    
+}
+
+.carousel-control-prev{
+    padding-top: 74% !important;
+}
+
+.carousel-control-next{
+    padding-top: 74%!important;
+}
+
+
+.carousel-control-prev-icon{
+    width: 40px !important;
+    height: 40px !important;
+}
+
+.carousel-control-next-icon{
+    width: 40px !important;
+    height: 40px !important;
+}
+
