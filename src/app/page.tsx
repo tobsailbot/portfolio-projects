@@ -16,7 +16,7 @@ import { faGraduationCap } from '@fortawesome/free-solid-svg-icons'
 import { faWrench } from '@fortawesome/free-solid-svg-icons'
 import React, { useEffect, useRef, useState } from 'react';
 
-const iconSize:any = {
+const iconSize: any = {
   width: "25px",
   height: "25px",
   color: 'rgb(175, 199, 223)',
@@ -24,7 +24,7 @@ const iconSize:any = {
 
 export default function Home() {
 
-  let isEng:any = true;
+  let isEng: any = true;
 
   function selectText(element: HTMLElement | null) {
     if (element) {
@@ -35,6 +35,7 @@ export default function Home() {
       selection?.addRange(range);
     }
   }
+
 
   const selectMeRef = useRef<HTMLDivElement>(null);
 
@@ -59,15 +60,15 @@ export default function Home() {
   }
 
   return (
-    <div className='container text-light' style={{ maxWidth: '880px'}}>
+    <div className='container text-light' style={{ maxWidth: '880px' }}>
 
       <br />
       <br />
 
       <div className='rounded-card container-sm mt-4 p-2 border border-dark rounded-4'>
 
-        <div className='m-auto text-center' style={{ position: 'relative', top: '-50px', height: '115px', width: 'min-content'}}>
-          <Image className='border border-5' id='profile-img' width={150} src={profileImg} alt='Profile img' style={{ borderRadius: '100%', width: '150px', height: '150px'}} />
+        <div className='m-auto text-center' style={{ position: 'relative', top: '-50px', height: '115px', width: 'min-content' }}>
+          <Image className='border border-5' id='profile-img' width={150} src={profileImg} alt='Profile img' style={{ borderRadius: '100%', width: '150px', height: '150px' }} />
         </div>
 
         <h2 className='text-center'>
@@ -77,32 +78,32 @@ export default function Home() {
         <h5 className='text-center about'>🌐 Developer</h5>
 
         {
-          isEng ?(
-          <div className='p-2 mx-5 mt-3'>
-            <p className='about'>
-              I’m a self-taught developer from <i>Argentina</i> with a passion for creating web solutions. <br />
-              I’ve worked as a freelancer on various projects that aimed to solve real-world problems or to facilitate the work of other people.
-              I have experience in developing fullstack applications from scratch and deploying them online. 
-            </p>
-          </div>):
-          (
+          isEng ? (
             <div className='p-2 mx-5 mt-3'>
-            <p className='about'>
-            Soy un desarrollador autodidacta de <i>Argentina</i> con pasión por crear soluciones web. <br />
-            He trabajado como freelancer en varios proyectos que tenían como objetivo resolver problemas del mundo real o facilitar el trabajo de otras personas.
-            Tengo experiencia en el desarrollo de aplicaciones fullstack desde cero y en su implementación en línea.
-            </p>
-          </div>)
+              <p className='about'>
+                I’m a self-taught developer from <i>Argentina</i> with a passion for creating web solutions. <br />
+                I’ve worked as a freelancer on various projects that aimed to solve real-world problems or to facilitate the work of other people.
+                I have experience in developing fullstack applications from scratch and deploying them online.
+              </p>
+            </div>) :
+            (
+              <div className='p-2 mx-5 mt-3'>
+                <p className='about'>
+                  Soy un desarrollador autodidacta de <i>Argentina</i> con pasión por crear soluciones web. <br />
+                  He trabajado como freelancer en varios proyectos que tenían como objetivo resolver problemas del mundo real o facilitar el trabajo de otras personas.
+                  Tengo experiencia en el desarrollo de aplicaciones fullstack desde cero y en su implementación en línea.
+                </p>
+              </div>)
         }
 
         <div className=' m-auto text-center pt-1'>
-          <a className='btn p-1 btn-dark' href={'https://www.linkedin.com/in/tobias-pilarche/'} target='_blank'><FontAwesomeIcon style={iconSize} icon={faLinkedin} /></a>
+          <a title='Linkedin' className='btn p-1 btn-dark' href={'https://www.linkedin.com/in/tobias-pilarche/'} target='_blank'><FontAwesomeIcon style={iconSize} icon={faLinkedin} /></a>
           &nbsp; &nbsp; &nbsp;
-          <a className='btn p-1 btn-dark' href={'https://github.com/tobsailbot?tab=repositories'} target='_blank'><FontAwesomeIcon style={iconSize} icon={faGithub} /></a>
+          <a title='Github' className='btn p-1 btn-dark' href={'https://github.com/tobsailbot?tab=repositories'} target='_blank'><FontAwesomeIcon style={iconSize} icon={faGithub} /></a>
           &nbsp; &nbsp; &nbsp;
-          <button className='btn p-1 btn-dark' onClick={handleClick}><FontAwesomeIcon style={iconSize} icon={faEnvelope} /></button>
+          <button title='Email' className='btn p-1 btn-dark' onClick={handleClick}><FontAwesomeIcon style={iconSize} icon={faEnvelope} /></button>
           &nbsp; &nbsp; &nbsp;
-          <a className='btn p-1 btn-dark about ' href="/files/CV-Tobias-Pilarche.pdf" download >CV</a>
+          <a title='Curriculum' className='btn p-1 btn-dark about ' href="/files/CV-Tobias-Pilarche.pdf" download >CV</a>
         </div>
         <div className='text-center mt-3 mb-3'>
           <i className='about' id="selectme" ref={selectMeRef}>tpilarche@gmail.com</i>
@@ -115,46 +116,46 @@ export default function Home() {
       <div className='rounded-card container-sm mt-3 p-2 border  border-dark rounded-4'>
 
         <div className="mx-3">
-           { isEng ? (
+          {isEng ? (
             <h4 className='mt-3'><FontAwesomeIcon className='align-top py-0' style={iconSize} icon={faCode} />
-            &nbsp; Projects
+              &nbsp; Projects
             </h4>
-           ):
-           (
-            <h4 className='mt-3'><FontAwesomeIcon className='align-top py-0' style={iconSize} icon={faCode} />
-            &nbsp; Proyectos
-            </h4>
-           )
-           }
+          ) :
+            (
+              <h4 className='mt-3'><FontAwesomeIcon className='align-top py-0' style={iconSize} icon={faCode} />
+                &nbsp; Proyectos
+              </h4>
+            )
+          }
           <br />
 
           <div className='proj-card row border p-3 mx-1 border rounded-4 border-0'>
             <div className="row text-center m-auto py-3">
-            <p className='m-0 p-0 h6' >
-                <a className='link-offset-2' href="https://dental-turno.web.app/" target='_blank' style={{color:'inherit',textDecorationColor: 'grey'}}>
+              <p className='m-0 p-0 h6' >
+                <a className='link-offset-2' href="https://dental-turno.web.app/" target='_blank' style={{ color: 'inherit', textDecorationColor: 'grey' }}>
                   DENTAL TURNO
                 </a>
               </p>
-              </div>
+            </div>
             <div className="row m-auto p-1">
-              <div className="col-12 m-auto text-center py-2" style={{maxWidth:'350px'}}>
+              <div className="col-12 m-auto text-center py-2" style={{ maxWidth: '350px' }}>
                 <a href="https://dental-turno.web.app/" target='_blank'>
-                  <Image height={200} width={300} src={dentalImg} alt='Dental Turno' style={{ borderRadius: '20px', width:'100%', height:'100%'}} /> 
+                  <Image height={200} width={300} src={dentalImg} alt='Dental Turno' style={{ borderRadius: '20px', width: '100%', height: '100%' }} />
                 </a>
               </div>
               <div className="col d-grid">
                 <div className="row py-3">
                   {
-                  isEng ?(
-                  <p className='about'> A web app system for managing dental appointments with an integrated scheduler, patient profiles, and an interactive odontogram.</p>
-                  ):
-                  (
-                  <p className='about'> Un sistema de aplicación web para gestionar turnos dentales con un calendario integrado, fichero de pacientes y un odontograma interactivo.</p>
-                  )
+                    isEng ? (
+                      <p className='about'> A web app system for managing dental appointments with an integrated scheduler, patient profiles, and an interactive odontogram.</p>
+                    ) :
+                      (
+                        <p className='about'> Un sistema de aplicación web para gestionar turnos dentales con un calendario integrado, fichero de pacientes y un odontograma interactivo.</p>
+                      )
                   }
                 </div>
                 <div className="row align-items-center p-0 m-0 text-center justify-content-center" >
-                  <div style={{backgroundColor:'hsl(225, 22%, 18%)', width:'auto', padding:'10px 22px 10px 22px', borderRadius:'12px'}}>
+                  <div style={{ backgroundColor: 'hsl(225, 22%, 18%)', width: 'auto', padding: '10px 22px 10px 22px', borderRadius: '12px' }}>
                     <img height={42} src="https://skillicons.dev/icons?i=angular,typescript,django,python&theme=dark" alt='Angular, TS, Django, Python' />
                   </div>
                 </div>
@@ -168,32 +169,32 @@ export default function Home() {
           <div className='proj-card row border p-3 mx-1 border rounded-4 border-0'>
             <div className="row text-center m-auto py-3">
               <p className='m-0 p-0 h6' >
-              <a className='link-offset-2' href="https://tobsa.com.ar/" target='_blank' style={{color:'inherit',textDecorationColor: 'grey'}}>
+                <a className='link-offset-2' href="https://tobsa.com.ar/" target='_blank' style={{ color: 'inherit', textDecorationColor: 'grey' }}>
                   E-COMMERCE
                 </a>
               </p>
             </div>
             <div className="row m-auto p-1">
-              <div className="col-12 m-auto text-center py-2" style={{maxWidth:'350px'}}>
+              <div className="col-12 m-auto text-center py-2" style={{ maxWidth: '350px' }}>
                 <a href="https://tobsa.com.ar/" target='_blank'>
-                <Image height={200} width={300} src={ecommerceImg} alt='E-COMMERCE' style={{ borderRadius: '20px', width:'100%', height:'100%'}} /> 
+                  <Image height={200} width={300} src={ecommerceImg} alt='E-COMMERCE' style={{ borderRadius: '20px', width: '100%', height: '100%' }} />
                 </a>
               </div>
               <div className="col d-grid">
                 <div className="row py-3">
-                {
-                  isEng ?(
-                    <p className='about'>
-                    An store site for digital products. Built with WordPress plugins and an Angular microfrontend. Features a database, email delivery and downloads.
-                    </p>
-                  ):
-                  (
-                  <p className='about'> Una tienda para productos digitales. Construido con plugins de WordPress y un microfrontend de Angular. Cuenta con una base de datos, entrega de correos electrónicos y descargas.</p>
-                  )
+                  {
+                    isEng ? (
+                      <p className='about'>
+                        An store site for digital products. Built with WordPress plugins and an Angular microfrontend. Features a database, email delivery and downloads.
+                      </p>
+                    ) :
+                      (
+                        <p className='about'> Una tienda para productos digitales. Construido con plugins de WordPress y un microfrontend de Angular. Cuenta con una base de datos, entrega de correos electrónicos y descargas.</p>
+                      )
                   }
                 </div>
                 <div className="row align-items-center p-0 m-0 text-center justify-content-center" >
-                  <div style={{backgroundColor:'hsl(225, 22%, 18%)', width:'auto', padding:'10px 22px 10px 22px', borderRadius:'12px'}}>
+                  <div style={{ backgroundColor: 'hsl(225, 22%, 18%)', width: 'auto', padding: '10px 22px 10px 22px', borderRadius: '12px' }}>
                     <img height={42} src="https://skillicons.dev/icons?i=angular,wordpress,php,mysql&theme=dark" alt='Angular, Wordpress, php, mysql' />
                   </div>
                 </div>
@@ -202,37 +203,37 @@ export default function Home() {
           </div>
 
           <br />
-          <br />  
+          <br />
 
           <div className='proj-card row border p-3 mx-1 border rounded-4 border-0'>
             <div className="row text-center m-auto py-3">
               <p className='m-0 p-0 h6' >
-              <a className='link-offset-2' href="https://peloturno-e8bc6.web.app/" target='_blank' style={{color:'inherit',textDecorationColor: 'grey'}}>
+                <a className='link-offset-2' href="https://peloturno-e8bc6.web.app/" target='_blank' style={{ color: 'inherit', textDecorationColor: 'grey' }}>
                   FULBOLISTA
                 </a>
               </p>
             </div>
             <div className="row m-auto p-1">
-              <div className="col-12 m-auto text-center py-2" style={{maxWidth:'350px'}}>
+              <div className="col-12 m-auto text-center py-2" style={{ maxWidth: '350px' }}>
                 <a href="https://peloturno-e8bc6.web.app/" target='_blank'>
-                  <Image height={200} width={300} src={fulbolistaImg} alt='Fulbolista' style={{ borderRadius: '20px', width:'100%', height:'100%'}} /> 
+                  <Image height={200} width={300} src={fulbolistaImg} alt='Fulbolista' style={{ borderRadius: '20px', width: '100%', height: '100%' }} />
                 </a>
               </div>
               <div className="col d-grid">
                 <div className="row py-3">
-                {
-                  isEng ?(
-                  <p className='about'>
-                  A website for organizing football matches, where a user creates a room and other players join. They can chat, choose teams and see their names.                     </p>
-                  ):
-                  (
-                  <p className='about'>Un sitio web para organizar partidos de fútbol, donde un usuario crea una sala y otros jugadores se unen. Pueden chatear, elegir equipos y ver sus nombres.</p>
-                  )
+                  {
+                    isEng ? (
+                      <p className='about'>
+                        A website for organizing football matches, where a user creates a room and other players join. They can chat, choose teams and see their names.                     </p>
+                    ) :
+                      (
+                        <p className='about'>Un sitio web para organizar partidos de fútbol, donde un usuario crea una sala y otros jugadores se unen. Pueden chatear, elegir equipos y ver sus nombres.</p>
+                      )
                   }
                 </div>
                 <div className="row align-items-center p-0 m-0 text-center justify-content-center" >
-                  <div style={{backgroundColor:'hsl(225, 22%, 18%)', width:'auto', padding:'10px 22px 10px 22px', borderRadius:'12px'}}>
-                    <img height={42} src="https://skillicons.dev/icons?i=firebase,react,js,bootstrap&theme=dark" alt='Firebase, React, Js,Bootstrap' style={{width:'auto'}}/>
+                  <div style={{ backgroundColor: 'hsl(225, 22%, 18%)', width: 'auto', padding: '10px 22px 10px 22px', borderRadius: '12px' }}>
+                    <img height={42} src="https://skillicons.dev/icons?i=firebase,react,js,bootstrap&theme=dark" alt='Firebase, React, Js,Bootstrap' style={{ width: 'auto' }} />
                   </div>
                 </div>
               </div>
@@ -252,85 +253,85 @@ export default function Home() {
       <div className="rounded-card container-sm mt-3 p-2 border  border-dark rounded-4">
         <div className="mx-3">
 
-        { isEng ? (
-              <h4 className='mt-3'><FontAwesomeIcon className='align-top py-0' style={iconSize} icon={faWrench} />
+          {isEng ? (
+            <h4 className='mt-3'><FontAwesomeIcon className='align-top py-0' style={iconSize} icon={faWrench} />
               &nbsp; Skills
-              </h4>
-            ):
+            </h4>
+          ) :
             (
               <h4 className='mt-3'><FontAwesomeIcon className='align-top py-0' style={iconSize} icon={faWrench} />
-              &nbsp; Habilidades
+                &nbsp; Habilidades
               </h4>
             )
           }
 
-       <br />
+          <br />
 
-        <div className="proj-card p-3 pb-1 ps-4 rounded-4 text-center">
-        { isEng ? (
+          <div className="proj-card p-3 pb-1 ps-4 rounded-4 text-center">
+            {isEng ? (
               <h6 className='m-0'>Languages</h6>
-            ):
-            (
-              <h6 className='m-0'>Lenguajes</h6>
-            )
-          }
+            ) :
+              (
+                <h6 className='m-0'>Lenguajes</h6>
+              )
+            }
             <div className="progress-bar row">
-              <div className="skills bar" style={{width: '80%'}}><b>Javascript</b></div>
+              <div className="skills bar" style={{ width: '80%' }}><b>Javascript</b></div>
             </div>
             <div className="progress-bar row">
-              <div className="skills bar" style={{width: '75%'}}><b>Python</b></div>
+              <div className="skills bar" style={{ width: '75%' }}><b>Python</b></div>
             </div>
             <div className="progress-bar row">
-              <div className="skills bar" style={{width: '89%'}}><b>HTML</b></div>
+              <div className="skills bar" style={{ width: '89%' }}><b>HTML</b></div>
             </div>
             <div className="progress-bar row">
-              <div className="skills bar" style={{width: '80%'}}><b>CSS</b></div>
+              <div className="skills bar" style={{ width: '80%' }}><b>CSS</b></div>
             </div>
             <div className="progress-bar row">
-              <div className="skills bar" style={{width: '65%'}}><b>SQL</b></div>
+              <div className="skills bar" style={{ width: '65%' }}><b>SQL</b></div>
             </div>
-        </div>
+          </div>
 
-        <br />
+          <br />
 
-        <div className="proj-card p-3 pb-1 ps-4 rounded-4 text-center">
-          <h6 className='m-0'>Frameworks</h6>
+          <div className="proj-card p-3 pb-1 ps-4 rounded-4 text-center">
+            <h6 className='m-0'>Frameworks</h6>
             <div className="progress-bar row">
-              <div className="skills bar" style={{width: '76%'}}><b>Angular</b></div>
+              <div className="skills bar" style={{ width: '76%' }}><b>Angular</b></div>
             </div>
             <div className="progress-bar row">
-              <div className="skills bar" style={{width: '68%'}}><b>React</b></div>
+              <div className="skills bar" style={{ width: '68%' }}><b>React</b></div>
             </div>
             <div className="progress-bar row">
-              <div className="skills bar" style={{width: '85%'}}><b>Django</b></div>
+              <div className="skills bar" style={{ width: '85%' }}><b>Django</b></div>
             </div>
             <div className="progress-bar row">
-              <div className="skills bar" style={{width: '75%'}}><b>NextJS</b></div>
+              <div className="skills bar" style={{ width: '75%' }}><b>NextJS</b></div>
             </div>
-        </div>
+          </div>
 
-        <br />
+          <br />
 
-        <div className="proj-card p-3 pb-1 ps-4 rounded-4 text-center">
-        { isEng ? (
+          <div className="proj-card p-3 pb-1 ps-4 rounded-4 text-center">
+            {isEng ? (
               <h6 className='m-0'>Softwares (extra)</h6>
-            ):
-            (
-              <h6 className='m-0'>Programas (extra)</h6>
-            )
-          }
+            ) :
+              (
+                <h6 className='m-0'>Programas (extra)</h6>
+              )
+            }
             <div className="progress-bar row">
-              <div className="skills bar" style={{width: '88%'}}><b>Adobe Premiere Pro</b></div>
+              <div className="skills bar" style={{ width: '88%' }}><b>Adobe Premiere Pro</b></div>
             </div>
             <div className="progress-bar row">
-              <div className="skills bar" style={{width: '75%'}}><b>Blender 3D</b></div>
+              <div className="skills bar" style={{ width: '75%' }}><b>Blender 3D</b></div>
             </div>
             <div className="progress-bar row">
-              <div className="skills bar" style={{width: '83%'}}><b>Adobe Photoshop</b></div>
+              <div className="skills bar" style={{ width: '83%' }}><b>Adobe Photoshop</b></div>
             </div>
-        </div>
+          </div>
 
-        <br />
+          <br />
 
         </div>
       </div>
@@ -341,14 +342,14 @@ export default function Home() {
       <div className="rounded-card container-sm mt-3 p-2 border  border-dark rounded-4">
 
         <div className="mx-3">
-          { isEng ? (
-              <h4 className='mt-3'><FontAwesomeIcon className='align-top py-0' style={iconSize} icon={faGraduationCap} />
+          {isEng ? (
+            <h4 className='mt-3'><FontAwesomeIcon className='align-top py-0' style={iconSize} icon={faGraduationCap} />
               &nbsp; Education
-              </h4>
-            ):
+            </h4>
+          ) :
             (
               <h4 className='mt-3'><FontAwesomeIcon className='align-top py-0' style={iconSize} icon={faGraduationCap} />
-              &nbsp; Educación
+                &nbsp; Educación
               </h4>
             )
           }
