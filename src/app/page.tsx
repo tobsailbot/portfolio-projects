@@ -64,12 +64,10 @@ export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleDivClick = () => {
-    // Update the state to open the modal box
     setIsModalOpen(true);
   };
 
   const handleCloseModal = () => {
-    // Update the state to close the modal box
     setIsModalOpen(false);
   };
 
@@ -125,15 +123,17 @@ export default function Home() {
       </div>
       
       {
-      <div>
-        <ModalBs
-          title='DENTAL TURNO'
-          description="Aplicación web para gestionar turnos dentales con un calendario integrado, fichero de pacientes y un odontograma interactivo."
-          imgs={['/img/calendario.png','/img/ficha.png','/img/odontogram.png','/img/statistics.png']}
-          url='https://dental-turno.web.app/'
-        />
-      </div>
-    }
+        <div>
+          <ModalBs
+            title='DENTAL TURNO'
+            description="Aplicación web para gestionar turnos dentales con un calendario integrado, fichero de pacientes y un odontograma interactivo."
+            imgs={['/img/calendario.png','/img/ficha.png','/img/odontogram.png','/img/statistics.png']}
+            url='https://dental-turno.web.app/'
+            isOpen={isModalOpen}
+            setIsOpen={setIsModalOpen}
+          />
+        </div>
+      }
 
       <br />
       <br />
