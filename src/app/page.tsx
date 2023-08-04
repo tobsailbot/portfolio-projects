@@ -61,6 +61,18 @@ export default function Home() {
     isEng = false;
   }
 
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleDivClick = () => {
+    // Update the state to open the modal box
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    // Update the state to close the modal box
+    setIsModalOpen(false);
+  };
+
   return (
     <div className='container text-light' style={{ maxWidth: '880px' }}>
 
@@ -81,7 +93,7 @@ export default function Home() {
 
         {
           isEng ? (
-            <div className='p-2 mx-5 mt-3'>
+            <div className='p-2 mx-5 mt-3 text-center'>
               <p className='about'>
                 I’m a self-taught developer from <i>Argentina</i> with a passion for creating web solutions. <br />
                 I’ve worked as a freelancer on various projects that aimed to solve real-world problems or to facilitate the work of other people.
@@ -89,7 +101,7 @@ export default function Home() {
               </p>
             </div>) :
             (
-              <div className='p-2 mx-5 mt-3'>
+              <div className='p-2 mx-5 mt-3 text-center'>
                 <p className='about'>
                   Soy un desarrollador autodidacta de <i>Argentina</i> con pasión por crear soluciones web. <br />
                   He trabajado como freelancer en varios proyectos que tenían como objetivo resolver problemas del mundo real o facilitar el trabajo de otras personas.
@@ -112,17 +124,16 @@ export default function Home() {
         </div>
       </div>
       
-      {/*
-
-      <ModalBs
-        btn_title='dental turno modal'
-        title='DENTAL TURNO' 
-        description="Aplicación web para gestionar turnos dentales con un calendario integrado, fichero de pacientes y un odontograma interactivo."
-        imgs={
-        <img src='/img/calendario.pn' width={'100%'} style={{ borderRadius: '12px'}}></img>
-      }
-      />
-    */ }
+      {
+      <div>
+        <ModalBs
+          title='DENTAL TURNO'
+          description="Aplicación web para gestionar turnos dentales con un calendario integrado, fichero de pacientes y un odontograma interactivo."
+          imgs={['/img/calendario.png','/img/ficha.png','/img/odontogram.png','/img/statistics.png']}
+          url='https://dental-turno.web.app/'
+        />
+      </div>
+    }
 
       <br />
       <br />
@@ -143,7 +154,7 @@ export default function Home() {
           }
           <br />
 
-          <div className='proj-card row border p-3 mx-1 border rounded-4 border-0'>
+          <div onClick={handleDivClick} className='proj-card row border p-3 mx-1 border rounded-4 border-0'>
             <div className="row text-center m-auto py-3">
               <p className='m-0 p-0 h6' >
                 <a className='link-offset-2' href="https://dental-turno.web.app/" target='_blank' style={{ color: 'inherit', textDecorationColor: 'grey' }}>

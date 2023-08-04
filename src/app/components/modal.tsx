@@ -1,12 +1,15 @@
 import { useState } from "react";
 import { Button, Modal } from "react-bootstrap";
 import Carousel from 'react-bootstrap/Carousel';
+import { faArrowUpRightFromSquare, faGraduationCap } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 interface ModalBsProps {
-    btn_title:string;
     title:string;
     description: string;
-    imgs: JSX.Element;
+    imgs: any;
+    url: string;
+    isOpen:boolean;
 }
 
 const ModalBs = (props: ModalBsProps) => {
@@ -17,12 +20,8 @@ const ModalBs = (props: ModalBsProps) => {
 
   return (
     <>
-      <Button variant="primary" onClick={handleShow}>
-        {props.btn_title}
-      </Button>
-
       <Modal
-        show={show}
+        show={props.isOpen}
         onHide={handleClose}
         size="lg"
         aria-labelledby="contained-modal-title-vcenter"
@@ -36,29 +35,26 @@ const ModalBs = (props: ModalBsProps) => {
         <p className='about text-center'>
           {props.description}
         </p>
-        <div className='text-center'>
-          {props.imgs}
-        </div>
+        <p className='about text-center mb-4'>
+          <Button variant="primary" href={props.url}target='_blank'>
+            Ver proyecto <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+          </Button>
+        </p>
 
-        <Carousel>
-          
-          <Carousel.Item>
-            <img
-              className="w-100 px-2 m-auto"
-              src='/img/calendario.png'
-              alt="First slide"
-              style={{ borderRadius: '12px'}}
-            />
-            <Carousel.Caption className="about text-center m-auto w-75" style={{maxWidth:'500px'}}>
-              <i>
-              Calendar for events with month, week and days selector
-              </i>
-            </Carousel.Caption>
-          </Carousel.Item>
-          
-
-        </Carousel>
-
+          <Carousel>
+            {props.imgs.map((imgUrl:any, index:any) => (
+              <Carousel.Item key={index}>
+                <img
+                  className="w-100 px-2 m-auto"
+                  src={imgUrl}
+                  alt={`Slide ${index + 1}`}
+                  style={{ borderRadius: '12px'}}
+                />
+                <Carousel.Caption className="about text-center m-auto w-75 mt-4" style={{maxWidth:'500px'}}>
+                </Carousel.Caption>
+              </Carousel.Item>
+            ))}
+          </Carousel>
         </Modal.Body>
 
       </Modal>
