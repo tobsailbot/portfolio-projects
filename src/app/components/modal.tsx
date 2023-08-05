@@ -43,9 +43,9 @@ const ModalBs = (props: ModalBsProps) => {
 
           <Carousel>
             {props.imgs.map((imgUrl:any, index:any) => (
-              <Carousel.Item key={index}>
+              <Carousel.Item key={index} className="px-3">
                 <img
-                  className="w-100 px-3 m-auto"
+                  className="w-100 m-auto rounded-4 border"
                   src={imgUrl}
                   alt={`Slide ${index + 1}`}
                   style={{ borderRadius: '12px'}}

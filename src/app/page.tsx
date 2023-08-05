@@ -154,37 +154,19 @@ export default function Home() {
           }
           <br />
 
-          <div onClick={handleDivClick} className='proj-card row border p-3 mx-1 border rounded-4 border-0'>
-            <div className="row text-center m-auto py-3">
-              <p className='m-0 p-0 h6' >
-                <a className='link-offset-2' href="https://dental-turno.web.app/" target='_blank' style={{ color: 'inherit', textDecorationColor: 'grey' }}>
-                  DENTAL TURNO
-                </a>
+          <div onClick={handleDivClick} className='proj-card row border p-3 border rounded-4 border-0 m-auto' style={{ maxWidth: '550px' }}>
+            <div className="row text-center m-auto ">
+              <p className='link-offset-2 fs-5'>
+                DENTAL TURNO
               </p>
             </div>
-            <div className="row m-auto p-1">
-              <div className="col-12 m-auto text-center py-2" style={{ maxWidth: '350px' }}>
-                <a href="https://dental-turno.web.app/" target='_blank'>
-                  <Image height={200} width={300} src={dentalImg} alt='Dental Turno' style={{ borderRadius: '20px', width: '100%', height: '100%' }} />
-                </a>
+            <div className="row m-auto p-1" style={{ maxWidth: '350px' }}>
+              <Image className='p-0' height={200} width={300} src={dentalImg} alt='Dental Turno' style={{ borderRadius: '20px', width: '100%', height: '100%' }} />
+            <div className="row align-items-center p-0 m-0 text-center justify-content-center mt-3" >
+              <div style={{ backgroundColor: 'hsl(225, 22%, 18%)', width: 'auto', padding: '10px 22px 10px 22px', borderRadius: '12px' }}>
+                <img height={42} src="https://skillicons.dev/icons?i=angular,typescript,django,python&theme=dark" alt='Angular, TS, Django, Python' />
               </div>
-              <div className="col d-grid">
-                <div className="row py-3">
-                  {
-                    isEng ? (
-                      <p className='about'> A web app system for managing dental appointments with an integrated scheduler, patient profiles, and an interactive odontogram.</p>
-                    ) :
-                      (
-                        <p className='about'> Un sistema de aplicación web para gestionar turnos dentales con un calendario integrado, fichero de pacientes y un odontograma interactivo.</p>
-                      )
-                  }
-                </div>
-                <div className="row align-items-center p-0 m-0 text-center justify-content-center" >
-                  <div style={{ backgroundColor: 'hsl(225, 22%, 18%)', width: 'auto', padding: '10px 22px 10px 22px', borderRadius: '12px' }}>
-                    <img height={42} src="https://skillicons.dev/icons?i=angular,typescript,django,python&theme=dark" alt='Angular, TS, Django, Python' />
-                  </div>
-                </div>
-              </div>
+            </div>
             </div>
           </div>
 
