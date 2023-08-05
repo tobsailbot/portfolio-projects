@@ -14,8 +14,6 @@ interface ModalBsProps {
 }
 
 const ModalBs = (props: ModalBsProps) => {
-  const [show, setShow] = useState(false);
-
 
   const handleClose = () => {
     props.setIsOpen(false);
@@ -45,7 +43,7 @@ const ModalBs = (props: ModalBsProps) => {
             {props.imgs.map((imgUrl:any, index:any) => (
               <Carousel.Item key={index} className="px-3">
                 <img
-                  className="w-100 m-auto rounded-4 border"
+                  className="w-100 m-auto rounded-4"
                   src={imgUrl}
                   alt={`Slide ${index + 1}`}
                   style={{ borderRadius: '12px'}}

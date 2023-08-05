@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 import profileImg from './img/profile.png'
 import dentalImg from './img/dental-turno.png'
 import ecommerceImg from './img/ecommerce.png'
-import fulbolistaImg from './img/peloturno.png'
+import fulbolistaImg from './img/fulbolista.png'
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faGithub } from "@fortawesome/free-brands-svg-icons"
@@ -61,15 +61,35 @@ export default function Home() {
     isEng = false;
   }
 
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const modal: any = [
+    {
+      title: 'DENTAL TURNO',
+      description: "Aplicación web para gestionar turnos dentales con un calendario integrado, fichero de pacientes y un odontograma interactivo.",
+      imgs: ['/img/dental-turno/calendario.png', '/img/dental-turno/ficha.png', '/img/dental-turno/odontogram.png', '/img/dental-turno/statistics.png'],
+      url: 'https://dental-turno.web.app/'
+    },
+    {
+      title: 'E-COMMERCE',
+      description: "Una tienda para productos digitales. Cuenta con una base de datos, entrega de correos electrónicos y descargas.",
+      imgs: ['/img/e-commerce/home.png', '/img/e-commerce/productos.png', '/img/e-commerce/checkout.png',],
+      url: "https://tobsa.com.ar/"
+    },
+    {
+      title: 'FULBOLISTA',
+      description: "Un sitio web para organizar partidos de fútbol. Los jugadores se unen, pueden chatear, elegir equipos y ver sus nombres.",
+      imgs: ['/img/fulbolista/home.png','/img/fulbolista/jugadores.png', '/img/fulbolista/posiciones.png', '/img/fulbolista/chat.png',],
+      url: "http://fulbolista.vercel.app/"
+    }
+  ]
 
-  const handleDivClick = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [modalData, setModalData] = useState(modal[0]);
+
+  const handleDivClick = (i: any) => {
+    setModalData(modal[i]);
     setIsModalOpen(true);
   };
 
-  const handleCloseModal = () => {
-    setIsModalOpen(false);
-  };
 
   return (
     <div className='container text-light' style={{ maxWidth: '880px' }}>
@@ -99,11 +119,10 @@ export default function Home() {
               </p>
             </div>) :
             (
-              <div className='p-2 mx-5 mt-3 text-center'>
+              <div className='p-2  mt-3 m-auto text-center' style={{ maxWidth: '550px' }}>
                 <p className='about'>
-                  Soy un desarrollador autodidacta de <i>Argentina</i> con pasión por crear soluciones web. <br />
-                  He trabajado como freelancer en varios proyectos que tenían como objetivo resolver problemas del mundo real o facilitar el trabajo de otras personas.
-                  Tengo experiencia en el desarrollo de aplicaciones fullstack desde cero y en su implementación en línea.
+                  Soy un desarrollador autodidacta de <i>Argentina</i>.<br />
+                  He trabajado en varios proyectos que tenían como objetivo resolver problemas del mundo real o facilitar el trabajo de otras personas.
                 </p>
               </div>)
         }
@@ -121,40 +140,35 @@ export default function Home() {
           <i className='about' id="selectme" ref={selectMeRef}>tpilarche@gmail.com</i>
         </div>
       </div>
-      
-      {
-        <div>
-          <ModalBs
-            title='DENTAL TURNO'
-            description="Aplicación web para gestionar turnos dentales con un calendario integrado, fichero de pacientes y un odontograma interactivo."
-            imgs={['/img/calendario.png','/img/ficha.png','/img/odontogram.png','/img/statistics.png']}
-            url='https://dental-turno.web.app/'
-            isOpen={isModalOpen}
-            setIsOpen={setIsModalOpen}
-          />
-        </div>
-      }
+
 
       <br />
       <br />
 
       <div className='rounded-card container-sm mt-3 p-2 border  border-dark rounded-4'>
 
+        {
+          <div>
+            <ModalBs
+              title={modalData?.title}
+              description={modalData?.description}
+              imgs={modalData?.imgs}
+              url={modalData?.url}
+              isOpen={isModalOpen}
+              setIsOpen={setIsModalOpen}
+            />
+          </div>
+        }
+
         <div className="mx-3">
-          {isEng ? (
-            <h4 className='mt-3'><FontAwesomeIcon className='align-top py-0' style={iconSize} icon={faCode} />
-              &nbsp; Projects
-            </h4>
-          ) :
-            (
-              <h4 className='mt-3'><FontAwesomeIcon className='align-top py-0' style={iconSize} icon={faCode} />
-                &nbsp; Proyectos
-              </h4>
-            )
-          }
+          
+          <h4 className='mt-3'><FontAwesomeIcon className='align-top py-0' style={iconSize} icon={faCode} />
+            &nbsp; Proyectos
+          </h4>
+
           <br />
 
-          <div onClick={handleDivClick} className='proj-card row border p-3 border rounded-4 border-0 m-auto' style={{ maxWidth: '550px' }}>
+          <div onClick={() => handleDivClick(0)} className='proj-card row border p-3 border rounded-4 border-0 m-auto' style={{ maxWidth: '550px' }}>
             <div className="row text-center m-auto ">
               <p className='link-offset-2 fs-5'>
                 DENTAL TURNO
@@ -162,48 +176,29 @@ export default function Home() {
             </div>
             <div className="row m-auto p-1" style={{ maxWidth: '350px' }}>
               <Image className='p-0' height={200} width={300} src={dentalImg} alt='Dental Turno' style={{ borderRadius: '20px', width: '100%', height: '100%' }} />
-            <div className="row align-items-center p-0 m-0 text-center justify-content-center mt-3" >
-              <div style={{ backgroundColor: 'hsl(225, 22%, 18%)', width: 'auto', padding: '10px 22px 10px 22px', borderRadius: '12px' }}>
-                <img height={42} src="https://skillicons.dev/icons?i=angular,typescript,django,python&theme=dark" alt='Angular, TS, Django, Python' />
+              <div className="row align-items-center p-0 m-0 text-center justify-content-center mt-3" >
+                <div style={{ backgroundColor: 'hsl(225, 22%, 18%)', width: 'auto', padding: '10px 22px 10px 22px', borderRadius: '12px' }}>
+                  <img height={42} src="https://skillicons.dev/icons?i=angular,typescript,django,python&theme=dark" alt='Angular, TS, Django, Python' />
+                </div>
               </div>
-            </div>
             </div>
           </div>
 
+
           <br />
           <br />
 
-          <div className='proj-card row border p-3 mx-1 border rounded-4 border-0'>
-            <div className="row text-center m-auto py-3">
-              <p className='m-0 p-0 h6' >
-                <a className='link-offset-2' href="https://tobsa.com.ar/" target='_blank' style={{ color: 'inherit', textDecorationColor: 'grey' }}>
-                  E-COMMERCE
-                </a>
+          <div onClick={() => handleDivClick(1)} className='proj-card row border p-3 border rounded-4 border-0 m-auto' style={{ maxWidth: '550px' }}>
+            <div className="row text-center m-auto ">
+              <p className='link-offset-2 fs-5'>
+                E-COMMERCE
               </p>
             </div>
-            <div className="row m-auto p-1">
-              <div className="col-12 m-auto text-center py-2" style={{ maxWidth: '350px' }}>
-                <a href="https://tobsa.com.ar/" target='_blank'>
-                  <Image height={200} width={300} src={ecommerceImg} alt='E-COMMERCE' style={{ borderRadius: '20px', width: '100%', height: '100%' }} />
-                </a>
-              </div>
-              <div className="col d-grid">
-                <div className="row py-3">
-                  {
-                    isEng ? (
-                      <p className='about'>
-                        An store site for digital products. Built with WordPress plugins and an Angular microfrontend. Features a database, email delivery and downloads.
-                      </p>
-                    ) :
-                      (
-                        <p className='about'> Una tienda para productos digitales. Construido con plugins de WordPress y un microfrontend de Angular. Cuenta con una base de datos, entrega de correos electrónicos y descargas.</p>
-                      )
-                  }
-                </div>
-                <div className="row align-items-center p-0 m-0 text-center justify-content-center" >
-                  <div style={{ backgroundColor: 'hsl(225, 22%, 18%)', width: 'auto', padding: '10px 22px 10px 22px', borderRadius: '12px' }}>
-                    <img height={42} src="https://skillicons.dev/icons?i=angular,wordpress,php,mysql&theme=dark" alt='Angular, Wordpress, php, mysql' />
-                  </div>
+            <div className="row m-auto p-1" style={{ maxWidth: '350px' }}>
+              <Image className='p-0' height={200} width={300} src={ecommerceImg} alt='E-COMMERCE' style={{ borderRadius: '20px', width: '100%', height: '100%' }} />
+              <div className="row align-items-center p-0 m-0 text-center justify-content-center mt-3" >
+                <div style={{ backgroundColor: 'hsl(225, 22%, 18%)', width: 'auto', padding: '10px 22px 10px 22px', borderRadius: '12px' }}>
+                  <img height={42} src="https://skillicons.dev/icons?i=angular,wordpress,php,mysql&theme=dark" alt='Angular, Wordpress, php, mysql' />
                 </div>
               </div>
             </div>
@@ -212,36 +207,17 @@ export default function Home() {
           <br />
           <br />
 
-          <div className='proj-card row border p-3 mx-1 border rounded-4 border-0'>
-            <div className="row text-center m-auto py-3">
-              <p className='m-0 p-0 h6' >
-                <a className='link-offset-2' href="https://peloturno-e8bc6.web.app/" target='_blank' style={{ color: 'inherit', textDecorationColor: 'grey' }}>
-                  FULBOLISTA
-                </a>
+          <div onClick={() => handleDivClick(2)} className='proj-card row border p-3 border rounded-4 border-0 m-auto' style={{ maxWidth: '550px' }}>
+            <div className="row text-center m-auto ">
+              <p className='link-offset-2 fs-5'>
+                FULBOLISTA
               </p>
             </div>
-            <div className="row m-auto p-1">
-              <div className="col-12 m-auto text-center py-2" style={{ maxWidth: '350px' }}>
-                <a href="https://peloturno-e8bc6.web.app/" target='_blank'>
-                  <Image height={200} width={300} src={fulbolistaImg} alt='Fulbolista' style={{ borderRadius: '20px', width: '100%', height: '100%' }} />
-                </a>
-              </div>
-              <div className="col d-grid">
-                <div className="row py-3">
-                  {
-                    isEng ? (
-                      <p className='about'>
-                        A website for organizing football matches, where a user creates a room and other players join. They can chat, choose teams and see their names.                     </p>
-                    ) :
-                      (
-                        <p className='about'>Un sitio web para organizar partidos de fútbol, donde un usuario crea una sala y otros jugadores se unen. Pueden chatear, elegir equipos y ver sus nombres.</p>
-                      )
-                  }
-                </div>
-                <div className="row align-items-center p-0 m-0 text-center justify-content-center" >
-                  <div style={{ backgroundColor: 'hsl(225, 22%, 18%)', width: 'auto', padding: '10px 22px 10px 22px', borderRadius: '12px' }}>
-                    <img height={42} src="https://skillicons.dev/icons?i=firebase,react,js,bootstrap&theme=dark" alt='Firebase, React, Js,Bootstrap' style={{ width: 'auto' }} />
-                  </div>
+            <div className="row m-auto p-1" style={{ maxWidth: '350px' }}>
+              <Image className='p-0' height={200} width={300} src={fulbolistaImg} alt='Fulbolista' style={{ borderRadius: '20px', width: '100%', height: '100%' }} />
+              <div className="row align-items-center p-0 m-0 text-center justify-content-center mt-3" >
+                <div style={{ backgroundColor: 'hsl(225, 22%, 18%)', width: 'auto', padding: '10px 22px 10px 22px', borderRadius: '12px' }}>
+                  <img height={42} src="https://skillicons.dev/icons?i=firebase,react,js,bootstrap&theme=dark" alt='Firebase, React, Js,Bootstrap' />
                 </div>
               </div>
             </div>
