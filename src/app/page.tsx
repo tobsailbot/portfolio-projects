@@ -62,20 +62,22 @@ export default function Home() {
   }
 
   // cards hover effect
-  const divRef = useRef(null);
+  const handleGradientMove = (event:any) => {
+    const { currentTarget: target } = event;
+    const rect =  target.getBoundingClientRect();
+    const x = event.clientX - rect.left;
+    const y = event.clientY - rect.top;
 
-  const handleMove = (event:any) => {
-    let { clientX, clientY } = event;
-    console.log(clientX);
-    console.log(clientY);
+    target.style.setProperty("--mouse-x", `${x}px`);
+    target.style.setProperty("--mouse-y", `${y}px`);
+
   };
 
   useEffect(() => {
-    //document.addEventListener('mousemove', handleMove);
     let cards = document.querySelectorAll(".proj-card");
     for (let card of Array.from(cards)) {
       if (card instanceof HTMLElement) {
-          card.onmousemove = (e: any) => handleMove(e);
+          card.onmousemove = (e: any) => handleGradientMove(e);
       }
   }
   });
@@ -86,7 +88,7 @@ export default function Home() {
     {
       title: 'DENTAL TURNO',
       description: "Aplicación web para gestionar turnos dentales con un calendario integrado, fichero de pacientes y un odontograma interactivo.",
-      imgs: ['/img/dental-turno/calendario.png', '/img/dental-turno/ficha.png', '/img/dental-turno/odontogram.png', '/img/dental-turno/statistics.png'],
+      imgs: ['/img/dental-turno/home.png','/img/dental-turno/calendario.png', '/img/dental-turno/odontogram.png', '/img/dental-turno/statistics.png'],
       url: 'https://dental-turno.web.app/'
     },
     {
@@ -148,7 +150,7 @@ export default function Home() {
               </div>)
         }
 
-        <div className=' m-auto text-center pt-1'>
+        <div className='m-auto text-center pt-1'>
           <a title='Linkedin' className='btn p-1 btn-dark' href={'https://www.linkedin.com/in/tobias-pilarche/'} target='_blank'><FontAwesomeIcon style={iconSize} icon={faLinkedin} /></a>
           &nbsp; &nbsp; &nbsp;
           <a title='Github' className='btn p-1 btn-dark' href={'https://github.com/tobsailbot?tab=repositories'} target='_blank'><FontAwesomeIcon style={iconSize} icon={faGithub} /></a>
@@ -179,7 +181,7 @@ export default function Home() {
         </div>
       }
 
-      <div ref={divRef} id='proj' className='rounded-card container-sm mt-3 p-2 border border-dark rounded-4'>
+      <div id='proj' className='rounded-card container-sm mt-3 p-2 border border-dark rounded-4'>
 
         <div className="mx-3">
 
@@ -196,9 +198,9 @@ export default function Home() {
               </p>
             </div>
             <div className="row m-auto p-1" style={{ maxWidth: '350px' }}>
-              <Image className='p-0' height={200} width={300} src={dentalImg} alt='Dental Turno' style={{ borderRadius: '20px', width: '100%', height: '100%' }} />
+              <Image className='p-0' height={200} width={300} src={dentalImg} alt='Dental Turno' style={{ borderRadius: '20px', width: '100%', height: '100%',zIndex:'999' }} />
               <div className="row align-items-center p-0 m-0 text-center justify-content-center mt-3" >
-                <div style={{ backgroundColor: 'hsl(225, 22%, 18%)', width: 'auto', padding: '10px 22px 10px 22px', borderRadius: '12px' }}>
+                <div style={{ backgroundColor: 'hsl(225, 22%, 18%)', width: 'auto', padding: '10px 22px 10px 22px', borderRadius: '12px', zIndex:'999' }}>
                   <img height={42} src="https://skillicons.dev/icons?i=angular,typescript,django,python&theme=dark" alt='Angular, TS, Django, Python' />
                 </div>
               </div>
@@ -216,9 +218,9 @@ export default function Home() {
               </p>
             </div>
             <div className="row m-auto p-1" style={{ maxWidth: '350px' }}>
-              <Image className='p-0' height={200} width={300} src={ecommerceImg} alt='E-COMMERCE' style={{ borderRadius: '20px', width: '100%', height: '100%' }} />
+              <Image className='p-0' height={200} width={300} src={ecommerceImg} alt='E-COMMERCE' style={{ borderRadius: '20px', width: '100%', height: '100%', zIndex:'999'  }} />
               <div className="row align-items-center p-0 m-0 text-center justify-content-center mt-3" >
-                <div style={{ backgroundColor: 'hsl(225, 22%, 18%)', width: 'auto', padding: '10px 22px 10px 22px', borderRadius: '12px' }}>
+                <div style={{ backgroundColor: 'hsl(225, 22%, 18%)', width: 'auto', padding: '10px 22px 10px 22px', borderRadius: '12px', zIndex:'999'  }}>
                   <img height={42} src="https://skillicons.dev/icons?i=angular,wordpress,php,mysql&theme=dark" alt='Angular, Wordpress, php, mysql' />
                 </div>
               </div>
@@ -235,9 +237,9 @@ export default function Home() {
               </p>
             </div>
             <div className="row m-auto p-1" style={{ maxWidth: '350px' }}>
-              <Image className='p-0' height={200} width={300} src={fulbolistaImg} alt='Fulbolista' style={{ borderRadius: '20px', width: '100%', height: '100%' }} />
+              <Image className='p-0' height={200} width={300} src={fulbolistaImg} alt='Fulbolista' style={{ borderRadius: '20px', width: '100%', height: '100%', zIndex:'999' }} />
               <div className="row align-items-center p-0 m-0 text-center justify-content-center mt-3" >
-                <div style={{ backgroundColor: 'hsl(225, 22%, 18%)', width: 'auto', padding: '10px 22px 10px 22px', borderRadius: '12px' }}>
+                <div style={{ backgroundColor: 'hsl(225, 22%, 18%)', width: 'auto', padding: '10px 22px 10px 22px', borderRadius: '12px', zIndex:'999' }}>
                   <img height={42} src="https://skillicons.dev/icons?i=firebase,react,js,bootstrap&theme=dark" alt='Firebase, React, Js,Bootstrap' />
                 </div>
               </div>
