@@ -61,6 +61,27 @@ export default function Home() {
     isEng = false;
   }
 
+  // cards hover effect
+  const divRef = useRef(null);
+
+  const handleMove = (event:any) => {
+    let { clientX, clientY } = event;
+    console.log(clientX);
+    console.log(clientY);
+  };
+
+  useEffect(() => {
+    //document.addEventListener('mousemove', handleMove);
+    let cards = document.querySelectorAll(".proj-card");
+    for (let card of Array.from(cards)) {
+      if (card instanceof HTMLElement) {
+          card.onmousemove = (e: any) => handleMove(e);
+      }
+  }
+  });
+
+
+  // modals data
   const modal: any = [
     {
       title: 'DENTAL TURNO',
@@ -77,7 +98,7 @@ export default function Home() {
     {
       title: 'FULBOLISTA',
       description: "Un sitio web para organizar partidos de fútbol. Los jugadores se unen, pueden chatear, elegir equipos y ver sus nombres.",
-      imgs: ['/img/fulbolista/home.png','/img/fulbolista/jugadores.png', '/img/fulbolista/posiciones.png', '/img/fulbolista/chat.png',],
+      imgs: ['/img/fulbolista/home.png', '/img/fulbolista/jugadores.png', '/img/fulbolista/posiciones.png', '/img/fulbolista/chat.png',],
       url: "http://fulbolista.vercel.app/"
     }
   ]
@@ -145,30 +166,30 @@ export default function Home() {
       <br />
       <br />
 
-      <div className='rounded-card container-sm mt-3 p-2 border  border-dark rounded-4'>
+      {
+        <div>
+          <ModalBs
+            title={modalData?.title}
+            description={modalData?.description}
+            imgs={modalData?.imgs}
+            url={modalData?.url}
+            isOpen={isModalOpen}
+            setIsOpen={setIsModalOpen}
+          />
+        </div>
+      }
 
-        {
-          <div>
-            <ModalBs
-              title={modalData?.title}
-              description={modalData?.description}
-              imgs={modalData?.imgs}
-              url={modalData?.url}
-              isOpen={isModalOpen}
-              setIsOpen={setIsModalOpen}
-            />
-          </div>
-        }
+      <div ref={divRef} id='proj' className='rounded-card container-sm mt-3 p-2 border border-dark rounded-4'>
 
         <div className="mx-3">
-          
+
           <h4 className='mt-3'><FontAwesomeIcon className='align-top py-0' style={iconSize} icon={faCode} />
             &nbsp; Proyectos
           </h4>
 
           <br />
 
-          <div onClick={() => handleDivClick(0)} className='proj-card row border p-3 border rounded-4 border-0 m-auto' style={{ maxWidth: '550px' }}>
+          <div onClick={() => handleDivClick(0)} className='proj-card row p-3 rounded-4 m-auto' style={{ maxWidth: '550px' }}>
             <div className="row text-center m-auto ">
               <p className='link-offset-2 fs-5'>
                 DENTAL TURNO
@@ -188,7 +209,7 @@ export default function Home() {
           <br />
           <br />
 
-          <div onClick={() => handleDivClick(1)} className='proj-card row border p-3 border rounded-4 border-0 m-auto' style={{ maxWidth: '550px' }}>
+          <div onClick={() => handleDivClick(1)} className='proj-card row p-3 rounded-4 m-auto' style={{ maxWidth: '550px' }}>
             <div className="row text-center m-auto ">
               <p className='link-offset-2 fs-5'>
                 E-COMMERCE
@@ -207,7 +228,7 @@ export default function Home() {
           <br />
           <br />
 
-          <div onClick={() => handleDivClick(2)} className='proj-card row border p-3 border rounded-4 border-0 m-auto' style={{ maxWidth: '550px' }}>
+          <div onClick={() => handleDivClick(2)} className='proj-card row p-3 rounded-4 m-auto' style={{ maxWidth: '550px' }}>
             <div className="row text-center m-auto ">
               <p className='link-offset-2 fs-5'>
                 FULBOLISTA

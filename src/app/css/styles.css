@@ -29,8 +29,25 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
     background-color: #242938
 }
 
+
 .proj-card{
     background-color: hsl(225, 30%, 24%) !important;
+    position: relative !important;
+    border: 1px solid hsla(0, 0%, 100%, 0.1);
+}
+
+.proj-card::before {
+    background: radial-gradient(
+        800px circle at 100px 100px,
+        rgba(255,255,255,0.3),
+        transparent 50%)!important;
+    border-radius: inherit;
+    content : "";
+    height: 100%;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 100%;
 }
 
 .proj-card:hover{
