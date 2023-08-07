@@ -62,9 +62,9 @@ export default function Home() {
   }
 
   // cards hover effect
-  const handleGradientMove = (event:any) => {
+  const handleGradientMove = (event: any) => {
     const { currentTarget: target } = event;
-    const rect =  target.getBoundingClientRect();
+    const rect = target.getBoundingClientRect();
     const x = event.clientX - rect.left;
     const y = event.clientY - rect.top;
 
@@ -77,9 +77,9 @@ export default function Home() {
     let cards = document.querySelectorAll(".proj-card");
     for (let card of Array.from(cards)) {
       if (card instanceof HTMLElement) {
-          card.onmousemove = (e: any) => handleGradientMove(e);
+        card.onmousemove = (e: any) => handleGradientMove(e);
       }
-  }
+    }
   });
 
 
@@ -88,7 +88,7 @@ export default function Home() {
     {
       title: 'DENTAL TURNO',
       description: "Aplicación web para gestionar turnos dentales con un calendario integrado, fichero de pacientes y un odontograma interactivo.",
-      imgs: ['/img/dental-turno/home.png','/img/dental-turno/calendario.png', '/img/dental-turno/odontogram.png', '/img/dental-turno/statistics.png'],
+      imgs: ['/img/dental-turno/home.png', '/img/dental-turno/calendario.png', '/img/dental-turno/odontogram.png', '/img/dental-turno/statistics.png'],
       url: 'https://dental-turno.web.app/'
     },
     {
@@ -115,17 +115,17 @@ export default function Home() {
 
 
   return (
-    <div className='container text-light' style={{ maxWidth: '880px' }}>
+    <div className='container text-light' style={{ maxWidth: '850px' }}>
 
       <br />
       <br />
 
       <div className='rounded-card container-sm mt-4 p-2 border border-dark rounded-4'>
 
-        <div className='m-auto text-center' style={{ position: 'relative', top: '-50px', height: '115px', width: 'min-content' }}>
-          <Image className='border border-5' id='profile-img' width={150} src={profileImg} alt='Profile img' style={{ borderRadius: '100%', width: '150px', height: '150px' }} />
-        </div>
-
+        <div className='circle'></div>
+        
+        <Image id='profile-img'  width={150} height={150} src={profileImg} alt='Profile img' />
+        <div className="my-5 py-3"></div>
         <h2 className='text-center'>
           TOBIAS PILARCHE
         </h2>
@@ -198,9 +198,9 @@ export default function Home() {
               </p>
             </div>
             <div className="row m-auto p-1" style={{ maxWidth: '350px' }}>
-              <Image className='p-0' height={200} width={300} src={dentalImg} alt='Dental Turno' style={{ borderRadius: '20px', width: '100%', height: '100%',zIndex:'999' }} />
+              <Image className='p-0' height={200} width={300} src={dentalImg} alt='Dental Turno' style={{ borderRadius: '20px', width: '100%', height: '100%', zIndex: '999' }} />
               <div className="row align-items-center p-0 m-0 text-center justify-content-center mt-3" >
-                <div style={{ backgroundColor: 'hsl(225, 22%, 18%)', width: 'auto', padding: '10px 22px 10px 22px', borderRadius: '12px', zIndex:'999' }}>
+                <div style={{ backgroundColor: 'hsl(225, 22%, 18%)', width: 'auto', padding: '10px 22px 10px 22px', borderRadius: '12px', zIndex: '999' }}>
                   <img height={42} src="https://skillicons.dev/icons?i=angular,typescript,django,python&theme=dark" alt='Angular, TS, Django, Python' />
                 </div>
               </div>
@@ -218,9 +218,9 @@ export default function Home() {
               </p>
             </div>
             <div className="row m-auto p-1" style={{ maxWidth: '350px' }}>
-              <Image className='p-0' height={200} width={300} src={ecommerceImg} alt='E-COMMERCE' style={{ borderRadius: '20px', width: '100%', height: '100%', zIndex:'999'  }} />
+              <Image className='p-0' height={200} width={300} src={ecommerceImg} alt='E-COMMERCE' style={{ borderRadius: '20px', width: '100%', height: '100%', zIndex: '999' }} />
               <div className="row align-items-center p-0 m-0 text-center justify-content-center mt-3" >
-                <div style={{ backgroundColor: 'hsl(225, 22%, 18%)', width: 'auto', padding: '10px 22px 10px 22px', borderRadius: '12px', zIndex:'999'  }}>
+                <div style={{ backgroundColor: 'hsl(225, 22%, 18%)', width: 'auto', padding: '10px 22px 10px 22px', borderRadius: '12px', zIndex: '999' }}>
                   <img height={42} src="https://skillicons.dev/icons?i=angular,wordpress,php,mysql&theme=dark" alt='Angular, Wordpress, php, mysql' />
                 </div>
               </div>
@@ -237,9 +237,9 @@ export default function Home() {
               </p>
             </div>
             <div className="row m-auto p-1" style={{ maxWidth: '350px' }}>
-              <Image className='p-0' height={200} width={300} src={fulbolistaImg} alt='Fulbolista' style={{ borderRadius: '20px', width: '100%', height: '100%', zIndex:'999' }} />
+              <Image className='p-0' height={200} width={300} src={fulbolistaImg} alt='Fulbolista' style={{ borderRadius: '20px', width: '100%', height: '100%', zIndex: '999' }} />
               <div className="row align-items-center p-0 m-0 text-center justify-content-center mt-3" >
-                <div style={{ backgroundColor: 'hsl(225, 22%, 18%)', width: 'auto', padding: '10px 22px 10px 22px', borderRadius: '12px', zIndex:'999' }}>
+                <div style={{ backgroundColor: 'hsl(225, 22%, 18%)', width: 'auto', padding: '10px 22px 10px 22px', borderRadius: '12px', zIndex: '999' }}>
                   <img height={42} src="https://skillicons.dev/icons?i=firebase,react,js,bootstrap&theme=dark" alt='Firebase, React, Js,Bootstrap' />
                 </div>
               </div>
