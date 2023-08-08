@@ -134,7 +134,7 @@ export default function Home() {
 
 
   return (
-    <div className='container text-light' style={{ maxWidth: '850px' }}>
+    <div className='container text-light mt-3' style={{ maxWidth: '850px' }}>
 
       <br />
       <br />
