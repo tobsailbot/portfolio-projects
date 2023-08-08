@@ -10,10 +10,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faGithub } from "@fortawesome/free-brands-svg-icons"
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons"
 import { faCode } from '@fortawesome/free-solid-svg-icons'
-import { faFileArrowDown } from '@fortawesome/free-solid-svg-icons'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { faGraduationCap } from '@fortawesome/free-solid-svg-icons'
 import { faWrench } from '@fortawesome/free-solid-svg-icons'
+import { faGlobe } from '@fortawesome/free-solid-svg-icons'
 import React, { useEffect, useRef, useState } from 'react';
 
 import ModalBs from './components/modal';
@@ -74,7 +74,7 @@ export default function Home() {
   };
 
   useEffect(() => {
-    let cards = document.querySelectorAll(".proj-card");
+    let cards = document.querySelectorAll(".div-card");
     for (let card of Array.from(cards)) {
       if (card instanceof HTMLElement) {
         card.onmousemove = (e: any) => handleGradientMove(e);
@@ -130,7 +130,7 @@ export default function Home() {
           TOBIAS PILARCHE
         </h2>
 
-        <h5 className='text-center about'>🌐 Developer</h5>
+        <h4 className='text-center subtitle mt-2'><FontAwesomeIcon icon={faGlobe} width={20}/> Developer</h4>
 
         {
           isEng ? (
@@ -181,7 +181,7 @@ export default function Home() {
         </div>
       }
 
-      <div id='proj' className='rounded-card container-sm mt-3 p-2 border border-dark rounded-4'>
+      <div className='rounded-card container-sm mt-3 p-2 border border-dark rounded-4'>
 
         <div className="mx-3">
 
@@ -191,7 +191,7 @@ export default function Home() {
 
           <br />
 
-          <div onClick={() => handleDivClick(0)} className='proj-card row p-3 rounded-4 m-auto' style={{ maxWidth: '550px' }}>
+          <div onClick={() => handleDivClick(0)} className='div-card proj row p-3 rounded-4 m-auto' style={{ maxWidth: '550px' }}>
             <div className="row text-center m-auto ">
               <p className='link-offset-2 fs-5'>
                 DENTAL TURNO
@@ -211,7 +211,7 @@ export default function Home() {
           <br />
           <br />
 
-          <div onClick={() => handleDivClick(1)} className='proj-card row p-3 rounded-4 m-auto' style={{ maxWidth: '550px' }}>
+          <div onClick={() => handleDivClick(1)} className='div-card proj row p-3 rounded-4 m-auto' style={{ maxWidth: '550px' }}>
             <div className="row text-center m-auto ">
               <p className='link-offset-2 fs-5'>
                 E-COMMERCE
@@ -230,7 +230,7 @@ export default function Home() {
           <br />
           <br />
 
-          <div onClick={() => handleDivClick(2)} className='proj-card row p-3 rounded-4 m-auto' style={{ maxWidth: '550px' }}>
+          <div onClick={() => handleDivClick(2)} className='div-card proj row p-3 rounded-4 m-auto' style={{ maxWidth: '550px' }}>
             <div className="row text-center m-auto ">
               <p className='link-offset-2 fs-5'>
                 FULBOLISTA
@@ -273,7 +273,7 @@ export default function Home() {
 
           <br />
 
-          <div className="proj-card p-3 pb-1 ps-4 rounded-4 text-center">
+          <div className="div-card p-3 pb-1 ps-4 rounded-4 text-center">
             {isEng ? (
               <h6 className='m-0'>Languages</h6>
             ) :
@@ -300,7 +300,7 @@ export default function Home() {
 
           <br />
 
-          <div className="proj-card p-3 pb-1 ps-4 rounded-4 text-center">
+          <div className="div-card p-3 pb-1 ps-4 rounded-4 text-center">
             <h6 className='m-0'>Frameworks</h6>
             <div className="progress-bar row">
               <div className="skills bar" style={{ width: '76%' }}><b>Angular</b></div>
@@ -318,7 +318,7 @@ export default function Home() {
 
           <br />
 
-          <div className="proj-card p-3 pb-1 ps-4 rounded-4 text-center">
+          <div className="div-card p-3 pb-1 ps-4 rounded-4 text-center">
             {isEng ? (
               <h6 className='m-0'>Softwares (extra)</h6>
             ) :
@@ -361,7 +361,7 @@ export default function Home() {
           }
 
           <br />
-          <div className="proj-card p-3 rounded-4 ">
+          <div className="div-card p-3 rounded-4 ">
             <h6>
               National University of Lanús
             </h6>
@@ -372,7 +372,7 @@ export default function Home() {
 
           <br />
 
-          <div className="proj-card p-3 rounded-4 ">
+          <div className="div-card p-3 rounded-4 ">
             <b>
               Self-taught UI / UX  &nbsp;&nbsp;&nbsp;&nbsp; (2021 - Today)
             </b>
@@ -380,7 +380,7 @@ export default function Home() {
 
           <br />
 
-          <div className="proj-card p-3 rounded-4 ">
+          <div className="div-card p-3 rounded-4 ">
             <b>
               Online courses and seminaries &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (2020 - Today)
             </b>
