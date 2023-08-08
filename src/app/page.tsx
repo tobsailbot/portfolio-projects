@@ -136,15 +136,14 @@ export default function Home() {
           isEng ? (
             <div className='p-2 mx-5 mt-3 text-center'>
               <p className='about'>
-                I’m a self-taught developer from <i>Argentina</i> with a passion for creating web solutions. <br />
+                I’m a self-taught fullstack developer.<br />
                 I’ve worked as a freelancer on various projects that aimed to solve real-world problems or to facilitate the work of other people.
-                I have experience in developing fullstack applications from scratch and deploying them online.
               </p>
             </div>) :
             (
               <div className='p-2  mt-3 m-auto text-center' style={{ maxWidth: '550px' }}>
                 <p className='about'>
-                  Soy un desarrollador autodidacta de <i>Argentina</i>.<br />
+                  Soy desarrollador web fullstack.<br />
                   He trabajado en varios proyectos que tenían como objetivo resolver problemas del mundo real o facilitar el trabajo de otras personas.
                 </p>
               </div>)
