@@ -18,6 +18,8 @@ import React, { useEffect, useRef, useState } from 'react';
 
 import ModalBs from './components/modal';
 
+const currYear = new Date().getFullYear();
+
 const iconSize: any = {
   width: "25px",
   height: "25px",
@@ -120,7 +122,7 @@ export default function Home() {
       <br />
       <br />
 
-      <div className='rounded-card container-sm mt-4 p-2 border border-dark rounded-4'>
+      <div className='rounded-card container-sm mt-4 p-2 rounded-4'>
 
         <div className='circle'></div>
         
@@ -137,14 +139,14 @@ export default function Home() {
             <div className='p-2 mx-5 mt-3 text-center'>
               <p className='about'>
                 I’m a self-taught fullstack developer.<br />
-                I’ve worked as a freelancer on various projects that aimed to solve real-world problems or to facilitate the work of other people.
+                I work as a freelancer on projects that aimed to solve real-world problems or to facilitate the work of other people.
               </p>
             </div>) :
             (
-              <div className='p-2  mt-3 m-auto text-center' style={{ maxWidth: '550px' }}>
+              <div className='p-2  mt-3 m-auto text-center' style={{ maxWidth: '510px' }}>
                 <p className='about'>
                   Soy desarrollador web fullstack.<br />
-                  He trabajado en varios proyectos que tenían como objetivo resolver problemas del mundo real o facilitar el trabajo de otras personas.
+                  Trabajo en proyectos que tienen como objetivo resolver problemas del mundo real o facilitar el trabajo de otras personas.
                 </p>
               </div>)
         }
@@ -180,7 +182,7 @@ export default function Home() {
         </div>
       }
 
-      <div className='rounded-card container-sm mt-3 p-2 border border-dark rounded-4'>
+      <div className='rounded-card container-sm mt-3 p-2 rounded-4'>
 
         <div className="mx-3">
 
@@ -255,7 +257,7 @@ export default function Home() {
       <br />
       <br />
 
-      <div className="rounded-card container-sm mt-3 p-2 border  border-dark rounded-4">
+      <div className="rounded-card container-sm mt-3 p-2 rounded-4">
         <div className="mx-3">
 
           {isEng ? (
@@ -344,7 +346,7 @@ export default function Home() {
       <br />
       <br />
 
-      <div className="rounded-card container-sm mt-3 p-2 border  border-dark rounded-4">
+      <div className="rounded-card container-sm mt-3 p-2 rounded-4">
 
         <div className="mx-3">
           {isEng ? (
@@ -393,9 +395,9 @@ export default function Home() {
       <br />
       <br />
       <br />
-
-      <div className='text-center border-top border-secondary py-3 about'>
-        <i>Created with NextJS by Vercel.</i>
+      <hr />
+      <div className='text-center py-2 about'>
+       © {currYear} Tobias Pilarche - Digital Portfolio
       </div>
 
     </div>

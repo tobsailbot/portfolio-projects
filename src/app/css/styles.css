@@ -32,8 +32,8 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
   
 #profile-img{
     border-radius: 100%;
-    width: 150px;
-    height: 150px;
+    width: 148px;
+    height: 148px;
     position: absolute;
     top: 110px; /* Centramos verticalmente */
     left: 50%; /* Centramos horizontalmente */
@@ -93,7 +93,8 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 }
 
 .rounded-card{
-    background-color: #242938
+    background-color: #242938;
+    border: 1px solid hsla(0, 0%, 100%, 0.1) !important;
 }
 
 
