@@ -69,19 +69,36 @@ export default function Home() {
     const rect = target.getBoundingClientRect();
     const x = event.clientX - rect.left;
     const y = event.clientY - rect.top;
-
     target.style.setProperty("--mouse-x", `${x}px`);
     target.style.setProperty("--mouse-y", `${y}px`);
-
+  };
+  
+  // cards hover effect
+  const handleBorderMove = (event: any) => {
+    const { currentTarget: target } = event;
+    const rect = target.getBoundingClientRect();
+    const x = event.clientX - rect.left;
+    const y = event.clientY - rect.top;
+    target.style.setProperty("--mouse-x", `${x}px`);
+    target.style.setProperty("--mouse-y", `${y}px`);
   };
 
   useEffect(() => {
+    let cardContent = document.querySelectorAll(".card-content");
     let cards = document.querySelectorAll(".div-card");
+
+    for (let card of Array.from(cardContent)) {
+      if (card instanceof HTMLElement) {
+        card.onmousemove = (e: any) => handleBorderMove(e);
+      }
+    }
+
     for (let card of Array.from(cards)) {
       if (card instanceof HTMLElement) {
         card.onmousemove = (e: any) => handleGradientMove(e);
       }
     }
+
   });
 
 
@@ -122,46 +139,45 @@ export default function Home() {
       <br />
       <br />
 
-      <div className='rounded-card container-sm mt-4 p-2 rounded-4'>
-
-        <div className='circle'></div>
+      <div className="card-content mt-4 container-sm rounded-4">
+        <div className='rounded-card container-sm mt-0 p-2 rounded-4'>
         
-        <Image id='profile-img'  width={150} height={150} src={profileImg} alt='Profile img' />
-        <div className="my-5 py-3"></div>
-        <h2 className='text-center'>
-          TOBIAS PILARCHE
-        </h2>
-
-        <h4 className='text-center subtitle mt-2'><FontAwesomeIcon icon={faGlobe} width={20}/> Developer</h4>
-
-        {
-          isEng ? (
-            <div className='p-2 mx-5 mt-3 text-center'>
-              <p className='about'>
-                I’m a self-taught fullstack developer.<br />
-                I work as a freelancer on projects that aimed to solve real-world problems or to facilitate the work of other people.
-              </p>
-            </div>) :
-            (
-              <div className='p-2  mt-3 m-auto text-center' style={{ maxWidth: '510px' }}>
+          <div className='circle'></div>
+        
+          <Image id='profile-img'  width={150} height={150} src={profileImg} alt='Profile img' />
+          <div className="my-5 py-2"></div>
+          <h2 className='text-center'>
+            TOBIAS PILARCHE
+          </h2>
+          <h4 className='text-center subtitle mt-2'><FontAwesomeIcon icon={faGlobe} style={{color: 'rgb(175, 199, 223)',}} width={20}/> Developer</h4>
+          {
+            isEng ? (
+              <div className='p-2 mx-5 mt-3 text-center'>
                 <p className='about'>
-                  Soy desarrollador web fullstack.<br />
-                  Trabajo en proyectos que tienen como objetivo resolver problemas del mundo real o facilitar el trabajo de otras personas.
+                  I’m a self-taught fullstack developer.<br />
+                  I work as a freelancer on projects that aimed to solve real-world problems or to facilitate the work of other people.
                 </p>
-              </div>)
-        }
-
-        <div className='m-auto text-center pt-1'>
-          <a title='Linkedin' className='btn p-1 btn-dark' href={'https://www.linkedin.com/in/tobias-pilarche/'} target='_blank'><FontAwesomeIcon style={iconSize} icon={faLinkedin} /></a>
-          &nbsp; &nbsp; &nbsp;
-          <a title='Github' className='btn p-1 btn-dark' href={'https://github.com/tobsailbot?tab=repositories'} target='_blank'><FontAwesomeIcon style={iconSize} icon={faGithub} /></a>
-          &nbsp; &nbsp; &nbsp;
-          <button title='Email' className='btn p-1 btn-dark' onClick={handleClick}><FontAwesomeIcon style={iconSize} icon={faEnvelope} /></button>
-          &nbsp; &nbsp; &nbsp;
-          <a title='Curriculum' className='btn p-1 btn-dark about ' href="/files/CV-Tobias-Pilarche.pdf" download >CV</a>
-        </div>
-        <div className='text-center mt-3 mb-3'>
-          <i className='about' id="selectme" ref={selectMeRef}>tpilarche@gmail.com</i>
+              </div>) :
+              (
+                <div className='p-2  mt-3 m-auto text-center' style={{ maxWidth: '510px' }}>
+                  <p className='about'>
+                    Soy desarrollador web fullstack.<br />
+                    Trabajo en proyectos que tienen como objetivo resolver problemas del mundo real o facilitar el trabajo de otras personas.
+                  </p>
+                </div>)
+          }
+          <div className='m-auto text-center pt-1'>
+            <a title='Linkedin' className='btn p-1 btn-dark' href={'https://www.linkedin.com/in/tobias-pilarche/'} target='_blank'><FontAwesomeIcon style={iconSize} icon={faLinkedin} /></a>
+            &nbsp; &nbsp; &nbsp;
+            <a title='Github' className='btn p-1 btn-dark' href={'https://github.com/tobsailbot?tab=repositories'} target='_blank'><FontAwesomeIcon style={iconSize} icon={faGithub} /></a>
+            &nbsp; &nbsp; &nbsp;
+            <button title='Email' className='btn p-1 btn-dark' onClick={handleClick}><FontAwesomeIcon style={iconSize} icon={faEnvelope} /></button>
+            &nbsp; &nbsp; &nbsp;
+            <a title='Curriculum' className='btn p-1 btn-dark about ' href="/files/CV-Tobias-Pilarche.pdf" download >CV</a>
+          </div>
+          <div className='text-center mt-3 mb-3'>
+            <i className='about' id="selectme" ref={selectMeRef}>tpilarche@gmail.com</i>
+          </div>
         </div>
       </div>
 
