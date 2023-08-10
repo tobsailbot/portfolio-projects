@@ -24,8 +24,9 @@ body {
 
 #allCards{
     background-image: url(/img/bck/stars.png);
-    background-position: 8%;
-    background-attachment:local
+    background-position: 55%;
+    background-attachment:local;
+    background-size: 1090px;
 }
 
 @media (max-width: 425px){

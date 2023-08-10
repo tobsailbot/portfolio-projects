@@ -175,7 +175,7 @@ export default function Home() {
               &nbsp; &nbsp; &nbsp;
               <button title='Email' className='btn p-1 btn-dark' onClick={handleClick}><FontAwesomeIcon style={iconSize} icon={faEnvelope} /></button>
               &nbsp; &nbsp; &nbsp;
-              <a title='Curriculum' className='btn p-1 btn-dark about ' href="/files/CV-Tobias-Pilarche.pdf" download >CV</a>
+              <a title='Curriculum' style={{width:'35px', height:'39px'}} className='d-inline px-1 btn about btn-dark fs-5' href="/files/CV-Tobias-Pilarche.pdf" download >CV</a>
             </div>
             <div className='text-center mt-3 mb-3'>
               <i className='about' id="selectme" ref={selectMeRef}>tpilarche@gmail.com</i>
