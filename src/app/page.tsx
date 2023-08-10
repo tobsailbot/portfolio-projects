@@ -138,7 +138,7 @@ export default function Home() {
 
   return (
     <div id='allCards' ref={allCards} onMouseMove={handleMove}>
-      <div className='container text-light mt-3' style={{ maxWidth: '850px' }}>
+      <div className='container text-light mt-3' style={{ maxWidth: '1000px' }}>
         <br />
         <br />
         <div className="card-content mt-4 container-sm rounded-4">

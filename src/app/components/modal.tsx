@@ -30,12 +30,12 @@ const ModalBs = (props: ModalBsProps) => {
         centered>
 
         <Modal.Header closeButton>
-          <Modal.Title id="contained-modal-title-vcenter">
+          <Modal.Title id="contained-modal-title-vcenter" className="pt-3">
             {props.title}
           </Modal.Title>
         </Modal.Header>
         <Modal.Body className="mt-0 pt-0 pb-0">
-        <p className='about text-center pb-2'>
+        <p className='about text-center pb-3'>
           {props.description}
         </p>
 
@@ -56,11 +56,11 @@ const ModalBs = (props: ModalBsProps) => {
           
         </Modal.Body>
         <p className='about text-center mb-3'>
-          <Button variant="primary" href={props.url}target='_blank'>
+          <Button variant="primary" href={props.url}target='_blank' className="mb-3">
             Ver proyecto <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
           </Button>
         </p>
-
+              
       </Modal>
     </>
   );
