@@ -16,10 +16,11 @@ body {
 }
 */
 body {
-    background-image: radial-gradient(circle,hsl(224, 49%, 15%) 15%,hsl(240, 33%, 2%) 100%);
+    background-image: radial-gradient(circle at 100% 100px, hsl(224, 49%, 15%) 15%, hsl(240, 33%, 2%) 100%);
     background-attachment: fixed;
     background-size: auto;
 }
+
 
 .circle {
     background-image: linear-gradient(hsl(226, 30%, 26%), rgb(175, 199, 223));
