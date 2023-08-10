@@ -384,7 +384,7 @@ export default function Home() {
         <br />
         <br />
         <hr />
-        <div className='text-center py-2 about'>
+        <div className='text-center py-2 text-secondary'>
           © {currYear} Tobias Pilarche - Digital Portfolio
         </div>
       </div>
