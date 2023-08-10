@@ -259,7 +259,7 @@ export default function Home() {
         </div>
         <br />
         <br />
-        <div className='card-content rounded-4 mt-3'>
+        <div className='card-content container-sm rounded-4 mt-3'>
           <div className="rounded-card container-sm p-2 rounded-4">
             <div className="mx-3">
               {isEng ? (
@@ -339,7 +339,7 @@ export default function Home() {
         </div>
         <br />
         <br />
-        <div className="card-content rounded-4 mt-3">
+        <div className="card-content container-sm rounded-4 mt-3">
           <div className="rounded-card container-sm p-2 rounded-4">
             <div className="mx-3">
               {isEng ? (
