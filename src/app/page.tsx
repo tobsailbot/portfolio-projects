@@ -15,6 +15,8 @@ import { faGraduationCap } from '@fortawesome/free-solid-svg-icons'
 import { faWrench } from '@fortawesome/free-solid-svg-icons'
 import { faGlobe } from '@fortawesome/free-solid-svg-icons'
 import React, { useEffect, useRef, useState } from 'react';
+import engTranslations from './locales/en.json';
+import espTranslations from './locales/es.json';
 
 import ModalBs from './components/modal';
 
@@ -29,6 +31,7 @@ const iconSize: any = {
 export default function Home() {
 
   let isEng: any = true;
+
 
   function selectText(element: HTMLElement | null) {
     if (element) {
@@ -48,21 +51,18 @@ export default function Home() {
     selectText(selectMeRef.current);
   };
 
-  const [idioma, setIdioma] = useState('');
+  let [idioma, setIdioma] = useState(engTranslations);
 
   useEffect(() => {
     const obtenerIdioma = () => {
-      const idiomaNavegador = window.navigator.language;
-      setIdioma(idiomaNavegador);
+      const idiomaNavegador:string = window.navigator.language;
+      console.log(idiomaNavegador);
+      if (idiomaNavegador.substring(0, 2) == 'es'){
+        setIdioma(espTranslations);
+      }
     };
-
     obtenerIdioma();
   }, []);
-
-  //console.log(idioma); 
-  if (idioma.substring(0, 2) === 'es') {
-    isEng = false;
-  }
 
   // cards hover effect
   const handleGradientMove = (event: any) => {
@@ -152,22 +152,10 @@ export default function Home() {
               TOBIAS PILARCHE
             </h2>
             <h4 className='text-center subtitle mt-2'><FontAwesomeIcon icon={faGlobe} style={{ color: 'rgb(175, 199, 223)', }} width={20} /> Developer</h4>
-            {
-              isEng ? (
-                <div className='p-2 mx-5 mt-3 text-center'>
-                  <p className='about'>
-                    I’m a self-taught fullstack developer.<br />
-                    I work as a freelancer on projects that aimed to solve real-world problems or to facilitate the work of other people.
-                  </p>
-                </div>) :
-                (
-                  <div className='p-2  mt-3 m-auto text-center' style={{ maxWidth: '510px' }}>
-                    <p className='about'>
-                      Soy desarrollador web fullstack.<br />
-                      Trabajo en proyectos que tienen como objetivo resolver problemas del mundo real o facilitar el trabajo de otras personas.
-                    </p>
-                  </div>)
-            }
+              <div className='p-2  mt-3 m-auto text-center' style={{ maxWidth: '510px' }}>
+                <p className='about' dangerouslySetInnerHTML={{ __html: idioma.about }}>
+                </p>
+              </div>
             <div className='m-auto text-center pt-1'>
               <a title='Linkedin' className='btn p-1 btn-dark' href={'https://www.linkedin.com/in/tobias-pilarche/'} target='_blank'><FontAwesomeIcon style={iconSize} icon={faLinkedin} /></a>
               &nbsp; &nbsp; &nbsp;
@@ -200,7 +188,7 @@ export default function Home() {
           <div className='rounded-card container-sm  p-2 rounded-4'>
             <div className="mx-3">
               <h4 className='mt-3'><FontAwesomeIcon className='align-top py-0' style={iconSize} icon={faCode} />
-                &nbsp; Proyectos
+                &nbsp; {idioma.titles[0]}
               </h4>
               <br />
               <div onClick={() => handleDivClick(0)} className='div-card proj row p-3 rounded-4 m-auto' style={{ maxWidth: '550px' }}>
@@ -262,26 +250,12 @@ export default function Home() {
         <div className='card-content container-sm rounded-4 mt-3'>
           <div className="rounded-card container-sm p-2 rounded-4">
             <div className="mx-3">
-              {isEng ? (
                 <h4 className='mt-3'><FontAwesomeIcon className='align-top py-0' style={iconSize} icon={faWrench} />
-                  &nbsp; Skills
+                  &nbsp; {idioma.titles[1]}
                 </h4>
-              ) :
-                (
-                  <h4 className='mt-3'><FontAwesomeIcon className='align-top py-0' style={iconSize} icon={faWrench} />
-                    &nbsp; Habilidades
-                  </h4>
-                )
-              }
               <br />
               <div className="div-card p-3 pb-1 ps-4 rounded-4 text-center">
-                {isEng ? (
-                  <h6 className='m-0'>Languages</h6>
-                ) :
-                  (
-                    <h6 className='m-0'>Lenguajes</h6>
-                  )
-                }
+                  <h6 className='m-0'>{idioma.titles[2]}</h6>
                 <div className="progress-bar row">
                   <div className="skills bar" style={{ width: '80%' }}><b>Javascript</b></div>
                 </div>
@@ -300,7 +274,7 @@ export default function Home() {
               </div>
               <br />
               <div className="div-card p-3 pb-1 ps-4 rounded-4 text-center">
-                <h6 className='m-0'>Frameworks</h6>
+                <h6 className='m-0'>{idioma.titles[2]}</h6>
                 <div className="progress-bar row">
                   <div className="skills bar" style={{ width: '76%' }}><b>Angular</b></div>
                 </div>
@@ -316,13 +290,7 @@ export default function Home() {
               </div>
               <br />
               <div className="div-card p-3 pb-1 ps-4 rounded-4 text-center">
-                {isEng ? (
-                  <h6 className='m-0'>Softwares (extra)</h6>
-                ) :
-                  (
-                    <h6 className='m-0'>Programas (extra)</h6>
-                  )
-                }
+                  <h6 className='m-0'>{idioma.titles[2]}</h6>
                 <div className="progress-bar row">
                   <div className="skills bar" style={{ width: '88%' }}><b>Adobe Premiere Pro</b></div>
                 </div>
