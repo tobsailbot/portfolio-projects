@@ -5,7 +5,6 @@ import profileImg from './img/profile.png'
 import dentalImg from './img/dental-turno.png'
 import ecommerceImg from './img/ecommerce.png'
 import fulbolistaImg from './img/fulbolista.png'
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faGithub } from "@fortawesome/free-brands-svg-icons"
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons"
@@ -17,7 +16,6 @@ import { faGlobe } from '@fortawesome/free-solid-svg-icons'
 import React, { useEffect, useRef, useState } from 'react';
 import engTranslations from './locales/en.json';
 import espTranslations from './locales/es.json';
-
 import ModalBs from './components/modal';
 
 const currYear = new Date().getFullYear();
@@ -51,9 +49,10 @@ export default function Home() {
     selectText(selectMeRef.current);
   };
 
-  let [idioma, setIdioma] = useState(engTranslations);
+  const [idioma, setIdioma] = useState(engTranslations);
 
   useEffect(() => {
+
     const obtenerIdioma = () => {
       const idiomaNavegador:string = window.navigator.language;
       console.log(idiomaNavegador);
@@ -100,38 +99,14 @@ export default function Home() {
         card.onmousemove = (e: any) => handleGradientMove(e);
       }
     }
-
-
   });
 
 
-  // modals data
-  const modal: any = [
-    {
-      title: 'DENTAL TURNO',
-      description: "Aplicación web para gestionar turnos dentales con un calendario integrado, fichero de pacientes y un odontograma interactivo.",
-      imgs: ['/img/dental-turno/home.png', '/img/dental-turno/calendario.png', '/img/dental-turno/odontogram.png', '/img/dental-turno/statistics.png'],
-      url: 'https://dental-turno.web.app/'
-    },
-    {
-      title: 'E-COMMERCE',
-      description: "Una tienda para productos digitales. Cuenta con una base de datos, entrega de correos electrónicos y descargas.",
-      imgs: ['/img/e-commerce/home.png', '/img/e-commerce/productos.png', '/img/e-commerce/checkout.png',],
-      url: "https://tobsa.com.ar/"
-    },
-    {
-      title: 'FULBOLISTA',
-      description: "Un sitio web para organizar partidos de fútbol. Los jugadores se unen, pueden chatear, elegir equipos y ver sus nombres.",
-      imgs: ['/img/fulbolista/home.png', '/img/fulbolista/jugadores.png', '/img/fulbolista/posiciones.png', '/img/fulbolista/chat.png',],
-      url: "http://fulbolista.vercel.app/"
-    }
-  ]
-
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [modalData, setModalData] = useState(modal[0]);
+  const [modalData, setModalData] = useState(idioma.modals[0]);
 
   const handleDivClick = (i: any) => {
-    setModalData(modal[i]);
+    setModalData(idioma.modals[i]);
     setIsModalOpen(true);
   };
 
@@ -179,6 +154,7 @@ export default function Home() {
               description={modalData?.description}
               imgs={modalData?.imgs}
               url={modalData?.url}
+              button_text={idioma.button_text}
               isOpen={isModalOpen}
               setIsOpen={setIsModalOpen}
             />
@@ -274,7 +250,7 @@ export default function Home() {
               </div>
               <br />
               <div className="div-card p-3 pb-1 ps-4 rounded-4 text-center">
-                <h6 className='m-0'>{idioma.titles[2]}</h6>
+                <h6 className='m-0'>{idioma.titles[3]}</h6>
                 <div className="progress-bar row">
                   <div className="skills bar" style={{ width: '76%' }}><b>Angular</b></div>
                 </div>
@@ -290,7 +266,7 @@ export default function Home() {
               </div>
               <br />
               <div className="div-card p-3 pb-1 ps-4 rounded-4 text-center">
-                  <h6 className='m-0'>{idioma.titles[2]}</h6>
+                  <h6 className='m-0'>{idioma.titles[4]}</h6>
                 <div className="progress-bar row">
                   <div className="skills bar" style={{ width: '88%' }}><b>Adobe Premiere Pro</b></div>
                 </div>
@@ -310,17 +286,9 @@ export default function Home() {
         <div className="card-content container-sm rounded-4 mt-3">
           <div className="rounded-card container-sm p-2 rounded-4">
             <div className="mx-3">
-              {isEng ? (
                 <h4 className='mt-3'><FontAwesomeIcon className='align-top py-0' style={iconSize} icon={faGraduationCap} />
-                  &nbsp; Education
+                  &nbsp; {idioma.titles[5]}
                 </h4>
-              ) :
-                (
-                  <h4 className='mt-3'><FontAwesomeIcon className='align-top py-0' style={iconSize} icon={faGraduationCap} />
-                    &nbsp; Educación
-                  </h4>
-                )
-              }
               <br />
               <div className="div-card p-3 rounded-4 ">
                 <h6>

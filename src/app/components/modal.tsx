@@ -9,6 +9,7 @@ interface ModalBsProps {
     description: string;
     imgs: any;
     url: string;
+    button_text: string;
     isOpen: boolean; // A function that returns a boolean
     setIsOpen: (value: boolean) => void; // A function to set isOpen value
 }
@@ -57,7 +58,7 @@ const ModalBs = (props: ModalBsProps) => {
         </Modal.Body>
         <p className='about text-center mb-3'>
           <Button variant="primary" href={props.url}target='_blank' className="mb-3">
-            Ver proyecto <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+            {props.button_text} <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
           </Button>
         </p>
               

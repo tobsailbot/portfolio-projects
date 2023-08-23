@@ -8,5 +8,25 @@
       "Software",
       "Education"
     ],
-    "modals":[]
+    "modals":[
+      {
+        "title": "DENTAL TURNOs xd",
+        "description": "Web application for managing dental appointments with an integrated calendar, patient file, and interactive odontogram.",
+        "imgs": ["/img/dental-turno/home.png", "/img/dental-turno/calendario.png", "/img/dental-turno/odontogram.png", "/img/dental-turno/statistics.png"],
+        "url": "https://dental-turno.web.app/"
+      },
+      {
+        "title": "E-COMMERCE",
+        "description": "An online store for digital products. It features a database, email delivery, and downloads.",
+        "imgs": ["/img/e-commerce/home.png", "/img/e-commerce/productos.png", "/img/e-commerce/checkout.png"],
+        "url": "https://tobsa.com.ar/"
+      },
+      {
+        "title": "FULBOLISTA",
+        "description": "An interactive website for organizing soccer matches. Players join, chat, choose teams, and view their names.",
+        "imgs": ["/img/fulbolista/home.png", "/img/fulbolista/jugadores.png", "/img/fulbolista/posiciones.png", "/img/fulbolista/chat.png"],
+        "url": "http://fulbolista.vercel.app/"
+      }
+    ],
+    "button_text":"View Project"
 }
