@@ -28,5 +28,21 @@
         "url": "http://fulbolista.vercel.app/"
       }
     ],
-    "button_text":"View Project"
+    "button_text":"View Project",
+    "education":[
+      {
+        "title":"National University of Lanús",
+        "description":"Bachelor&apos;s degree in Audiovisual Communication &nbsp;&nbsp;&nbsp;&nbsp; (2017 - 2023)"
+      },
+      {
+        "title":"IFTS N° 26",
+        "description":"Computer Science Degree &nbsp;&nbsp;&nbsp;&nbsp; (2023 - Today)"
+      },
+      {
+        "description":"Self-taught UI / UX design &nbsp;&nbsp;&nbsp;&nbsp; (2021 - Today)"
+      },
+      {
+        "description":"Fullstack Web Development INTI Certification &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (2021)"
+      }
+    ]
 }

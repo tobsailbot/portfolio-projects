@@ -28,6 +28,22 @@
         "url": "http://fulbolista.vercel.app/"
       }
     ],
-    "button_text":"Ver Proyecto"
+    "button_text":"Ver Proyecto",
+    "education":[
+      {
+        "title":"Universidad Nacional de Lanús",
+        "description":"Licenciatura en Audiovisión &nbsp;&nbsp;&nbsp;&nbsp; (2017 - 2023)"
+      },
+      {
+        "title":"IFTS N° 26",
+        "description":"Tecnicatura en Desarrollo de Software &nbsp;&nbsp;&nbsp;&nbsp; (2023 - Today)"
+      },
+      {
+        "description":"Autodidacta en Diseño UX/UI &nbsp;&nbsp;&nbsp;&nbsp; (2021 - Today)"
+      },
+      {
+        "description":"Certificación en Desarrollo Web Fullstack INTI &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (2021)"
+      }
+    ]
 
 }

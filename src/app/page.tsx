@@ -54,9 +54,9 @@ export default function Home() {
   useEffect(() => {
 
     const obtenerIdioma = () => {
-      const idiomaNavegador:string = window.navigator.language;
+      const idiomaNavegador: string = window.navigator.language;
       console.log(idiomaNavegador);
-      if (idiomaNavegador.substring(0, 2) == 'es'){
+      if (idiomaNavegador.substring(0, 2) == 'es') {
         setIdioma(espTranslations);
       }
     };
@@ -127,10 +127,10 @@ export default function Home() {
               TOBIAS PILARCHE
             </h2>
             <h4 className='text-center subtitle mt-2'><FontAwesomeIcon icon={faGlobe} style={{ color: 'rgb(175, 199, 223)', }} width={20} /> Developer</h4>
-              <div className='p-2  mt-3 m-auto text-center' style={{ maxWidth: '510px' }}>
-                <p className='about' dangerouslySetInnerHTML={{ __html: idioma.about }}>
-                </p>
-              </div>
+            <div className='p-2  mt-3 m-auto text-center' style={{ maxWidth: '510px' }}>
+              <p className='about' dangerouslySetInnerHTML={{ __html: idioma.about }}>
+              </p>
+            </div>
             <div className='m-auto text-center pt-1'>
               <a title='Linkedin' className='btn p-1 btn-dark' href={'https://www.linkedin.com/in/tobias-pilarche/'} target='_blank'><FontAwesomeIcon style={iconSize} icon={faLinkedin} /></a>
               &nbsp; &nbsp; &nbsp;
@@ -138,7 +138,7 @@ export default function Home() {
               &nbsp; &nbsp; &nbsp;
               <button title='Email' className='btn p-1 btn-dark' onClick={handleClick}><FontAwesomeIcon style={iconSize} icon={faEnvelope} /></button>
               &nbsp; &nbsp; &nbsp;
-              <a title='Curriculum' style={{width:'35px', height:'39px'}} className='d-inline px-1 btn about btn-dark fs-5' href="/files/CV-Tobias-Pilarche.pdf" download >CV</a>
+              <a title='Curriculum' style={{ width: '35px', height: '39px' }} className='d-inline px-1 btn about btn-dark fs-5' href="/files/CV-Tobias-Pilarche.pdf" download >CV</a>
             </div>
             <div className='text-center mt-3 mb-3'>
               <i className='about' id="selectme" ref={selectMeRef}>tpilarche@gmail.com</i>
@@ -226,12 +226,12 @@ export default function Home() {
         <div className='card-content container-sm rounded-4 mt-3'>
           <div className="rounded-card container-sm p-2 rounded-4">
             <div className="mx-3">
-                <h4 className='mt-3'><FontAwesomeIcon className='align-top py-0' style={iconSize} icon={faWrench} />
-                  &nbsp; {idioma.titles[1]}
-                </h4>
+              <h4 className='mt-3'><FontAwesomeIcon className='align-top py-0' style={iconSize} icon={faWrench} />
+                &nbsp; {idioma.titles[1]}
+              </h4>
               <br />
               <div className="div-card p-3 pb-1 ps-4 rounded-4 text-center">
-                  <h6 className='m-0'>{idioma.titles[2]}</h6>
+                <h6 className='m-0'>{idioma.titles[2]}</h6>
                 <div className="progress-bar row">
                   <div className="skills bar" style={{ width: '80%' }}><b>Javascript</b></div>
                 </div>
@@ -266,7 +266,7 @@ export default function Home() {
               </div>
               <br />
               <div className="div-card p-3 pb-1 ps-4 rounded-4 text-center">
-                  <h6 className='m-0'>{idioma.titles[4]}</h6>
+                <h6 className='m-0'>{idioma.titles[4]}</h6>
                 <div className="progress-bar row">
                   <div className="skills bar" style={{ width: '88%' }}><b>Adobe Premiere Pro</b></div>
                 </div>
@@ -283,39 +283,35 @@ export default function Home() {
         </div>
         <br />
         <br />
-        <div className="card-content container-sm rounded-4 mt-3">
+        <div className="card-content container-sm rounded-4 mt-3 mb-5">
           <div className="rounded-card container-sm p-2 rounded-4">
             <div className="mx-3">
-                <h4 className='mt-3'><FontAwesomeIcon className='align-top py-0' style={iconSize} icon={faGraduationCap} />
-                  &nbsp; {idioma.titles[5]}
-                </h4>
+              <h4 className='mt-3'><FontAwesomeIcon className='align-top py-0' style={iconSize} icon={faGraduationCap} />
+                &nbsp; {idioma.titles[5]}
+              </h4>
               <br />
-              <div className="div-card p-3 rounded-4 ">
-                <h6>
-                  National University of Lanús
-                </h6>
-                <b>
-                  Bachelor&apos;s degree in Audiovisual Communication. &nbsp;&nbsp;&nbsp;&nbsp; (2017 - 2023)
-                </b>
-              </div>
-              <br />
-              <div className="div-card p-3 rounded-4 ">
-                <b>
-                  Self-taught UI / UX  &nbsp;&nbsp;&nbsp;&nbsp; (2021 - Today)
-                </b>
-              </div>
-              <br />
-              <div className="div-card p-3 rounded-4 ">
-                <b>
-                  Online courses and seminaries &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (2020 - Today)
-                </b>
-              </div>
+              {
+                idioma.education.map((item: any, index: any) => (
+                  <React.Fragment key={index}>
+                    <div className="div-card p-3 rounded-4 ">
+                      {
+                        item.title ? (
+                          <React.Fragment>
+                            <h6 dangerouslySetInnerHTML={{ __html: item.title }}></h6>
+                            <b dangerouslySetInnerHTML={{ __html: item.description }}></b>
+                          </React.Fragment>
+                        ):
+                          <b dangerouslySetInnerHTML={{ __html: item.description }}></b>
+                      }
+                    </div>
+                    <br />
+                  </React.Fragment>
+                ))
+              }
               <br />
             </div>
           </div>
         </div>
-        <br />
-        <br />
         <br />
         <br />
         <br />
