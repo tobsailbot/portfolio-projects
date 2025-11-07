@@ -47,7 +47,7 @@ const ModalBs = (props: ModalBsProps) => {
                   className="w-100 m-auto h-auto rounded-4"
                   src={imgUrl}
                   alt={`Slide ${index + 1}`}
-                  style={{ borderRadius: '12px', aspectRatio:'1000/750'}}
+                  style={{ borderRadius: '12px', aspectRatio:'1000/750', objectFit:'cover' }}
                 />
                 <Carousel.Caption className="about text-center m-auto w-75 mt-2" style={{maxWidth:'500px'}}>
                 </Carousel.Caption>

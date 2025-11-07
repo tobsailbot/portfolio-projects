@@ -10,7 +10,13 @@
     ],
     "modals":[
       {
-        "title": "DENTAL TURNOs xd",
+        "title": "TIENDA APP",
+        "description": "App de pedidos para negocios. Los clientes pueden ver el catálogo, agregar productos al carrito y realizar pedidos, con panel de control autogestionable para el negocio.",
+        "imgs": ["/img/tiendapp/home.png","/img/tiendapp/pedido.png", "/img/tiendapp/tienda.png", "/img/tiendapp/ui.jpg"],
+        "url": "https://tiendapp.satura.com.ar/"
+      },
+      {
+        "title": "DENTAL TURNOs",
         "description": "Web application for managing dental appointments with an integrated calendar, patient file, and interactive odontogram.",
         "imgs": ["/img/dental-turno/home.png", "/img/dental-turno/calendario.png", "/img/dental-turno/odontogram.png", "/img/dental-turno/statistics.png"],
         "url": "https://dental-turno.web.app/"

@@ -10,13 +10,19 @@
     ],
     "modals":[
       {
+        "title": "TIENDA APP",
+        "description": "App de pedidos para negocios. Los clientes pueden ver el catálogo, agregar productos al carrito y realizar pedidos, con panel de control autogestionable para el negocio.",
+        "imgs": ["/img/tiendapp/home.png","/img/tiendapp/pedido.png", "/img/tiendapp/tienda.png", "/img/tiendapp/ui.jpg"],
+        "url": "https://tiendapp.satura.com.ar/"
+      },
+      {
         "title": "DENTAL TURNO",
         "description": "Aplicación web para gestionar turnos dentales con un calendario integrado, fichero de pacientes y un odontograma interactivo.",
         "imgs": ["/img/dental-turno/home.png", "/img/dental-turno/calendario.png", "/img/dental-turno/odontogram.png", "/img/dental-turno/statistics.png"],
         "url": "https://dental-turno.web.app/"
       },
       {
-        "title": "E-COMMERCE",
+        "title": "DIGITAL STORE",
         "description": "Una tienda para productos digitales. Cuenta con una base de datos, entrega de correos electrónicos y descargas.",
         "imgs": ["/img/e-commerce/home.png", "/img/e-commerce/productos.png", "/img/e-commerce/checkout.png"],
         "url": "https://www.tobsa.com.ar/"

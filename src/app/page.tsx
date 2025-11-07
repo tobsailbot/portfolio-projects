@@ -170,6 +170,23 @@ export default function Home() {
               <div onClick={() => handleDivClick(0)} className='div-card proj row p-3 rounded-4 m-auto' style={{ maxWidth: '550px' }}>
                 <div className="row text-center m-auto ">
                   <p className='link-offset-2 fs-5'>
+                    TIENDA APP
+                  </p>
+                </div>
+                <div className="row m-auto p-1" style={{ maxWidth: '350px' }}>
+                  <Image className='p-0' height={200} width={300} src="/img/tiendapp/home.png" alt='Dental Turno' style={{ borderRadius: '20px', width: '100%', height: '100%', zIndex: '999' }} />
+                  <div className="row align-items-center p-0 m-0 text-center justify-content-center mt-3" >
+                    <div style={{ backgroundColor: 'hsl(225, 22%, 18%)', width: 'auto', padding: '10px 22px 10px 22px', borderRadius: '12px', zIndex: '999' }}>
+                      <img height={42} src="https://skillicons.dev/icons?i=nextjs,tailwind,vercel,supabase&theme=dark" alt='Angular, TS, Django, Python' />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br />
+              <br />
+              <div onClick={() => handleDivClick(1)} className='div-card proj row p-3 rounded-4 m-auto' style={{ maxWidth: '550px' }}>
+                <div className="row text-center m-auto ">
+                  <p className='link-offset-2 fs-5'>
                     DENTAL TURNO
                   </p>
                 </div>
@@ -184,10 +201,10 @@ export default function Home() {
               </div>
               <br />
               <br />
-              <div onClick={() => handleDivClick(1)} className='div-card proj row p-3 rounded-4 m-auto' style={{ maxWidth: '550px' }}>
+              <div onClick={() => handleDivClick(2)} className='div-card proj row p-3 rounded-4 m-auto' style={{ maxWidth: '550px' }}>
                 <div className="row text-center m-auto ">
                   <p className='link-offset-2 fs-5'>
-                    E-COMMERCE
+                    DIGITAL STORE
                   </p>
                 </div>
                 <div className="row m-auto p-1" style={{ maxWidth: '350px' }}>
@@ -201,7 +218,7 @@ export default function Home() {
               </div>
               <br />
               <br />
-              <div onClick={() => handleDivClick(2)} className='div-card proj row p-3 rounded-4 m-auto' style={{ maxWidth: '550px' }}>
+              <div onClick={() => handleDivClick(3)} className='div-card proj row p-3 rounded-4 m-auto' style={{ maxWidth: '550px' }}>
                 <div className="row text-center m-auto ">
                   <p className='link-offset-2 fs-5'>
                     FULBOLISTA
@@ -252,16 +269,16 @@ export default function Home() {
               <div className="div-card p-3 pb-1 ps-4 rounded-4 text-center">
                 <h6 className='m-0'>{idioma.titles[3]}</h6>
                 <div className="progress-bar row">
-                  <div className="skills bar" style={{ width: '76%' }}><b>Angular</b></div>
+                  <div className="skills bar" style={{ width: '85%' }}><b>React</b></div>
                 </div>
                 <div className="progress-bar row">
-                  <div className="skills bar" style={{ width: '68%' }}><b>React</b></div>
+                  <div className="skills bar" style={{ width: '78%' }}><b>NextJS</b></div>
                 </div>
                 <div className="progress-bar row">
-                  <div className="skills bar" style={{ width: '85%' }}><b>Django</b></div>
+                  <div className="skills bar" style={{ width: '77%' }}><b>Angular</b></div>
                 </div>
                 <div className="progress-bar row">
-                  <div className="skills bar" style={{ width: '75%' }}><b>NextJS</b></div>
+                  <div className="skills bar" style={{ width: '80%' }}><b>Django</b></div>
                 </div>
               </div>
               <br />
